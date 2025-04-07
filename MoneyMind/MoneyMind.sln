@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35327.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoneyMind", "MoneyMind\MoneyMind.csproj", "{7F757A09-79B5-4647-BFE7-48E07AC8C147}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7F757A09-79B5-4647-BFE7-48E07AC8C147}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F757A09-79B5-4647-BFE7-48E07AC8C147}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F757A09-79B5-4647-BFE7-48E07AC8C147}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F757A09-79B5-4647-BFE7-48E07AC8C147}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {33C375FF-CC20-40CA-A710-DC4D6D523C77}
+	EndGlobalSection
+EndGlobal
