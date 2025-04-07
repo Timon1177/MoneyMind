@@ -26,7 +26,7 @@
         </Grid>
 
         <Button Content="Login" Width="250" Height="40" Background="#2980B9" Foreground="White" FontWeight="Bold" BorderThickness="0" Grid.Row="4" Margin="0,10,0,0" Click="BtnLogin_Click"/>
-        <Button Content="Registrieren" Width="250" Height="40" Background="#27AE60" Foreground="White" FontWeight="Bold" BorderThickness="0" Grid.Row="5" Margin="0,10,0,0" Click="BtnRegister_Click"/>
+        <Button Content="Registrieren" Width="250" Height="40" Background="#27AE60" Foreground="White" FontWeight="Bold" BorderThickness="0" Grid.Row="4" Margin="30,63,30,-53" Click="BtnRegister_Click"/>
       </Grid>
     </Border>
   </Grid>

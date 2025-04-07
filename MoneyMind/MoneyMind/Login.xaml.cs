@@ -70,6 +70,9 @@ namespace MoneyMind
           if (count > 0)
           {
             MessageBox.Show("Login erfolgreich!");
+            MainWindow main = new MainWindow();
+            main.Show();
+            this.Close();
           }
           else
           {
