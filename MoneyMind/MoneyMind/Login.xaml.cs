@@ -81,5 +81,20 @@ namespace MoneyMind
         }
       }
     }
+    private void ToggleWindowMode_Click(object sender, RoutedEventArgs e)
+    {
+      if (this.WindowState == WindowState.Maximized && this.WindowStyle == WindowStyle.None)
+      {
+        this.WindowStyle = WindowStyle.SingleBorderWindow;
+        this.WindowState = WindowState.Normal;
+        FullscreenToggleButton.Content = "🗗";
+      }
+      else
+      {
+        this.WindowStyle = WindowStyle.None;
+        this.WindowState = WindowState.Maximized;
+        FullscreenToggleButton.Content = "⤢";
+      }
+    }
   }
 }

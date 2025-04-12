@@ -1,33 +1,79 @@
 ﻿<Window x:Class="MoneyMind.Login"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Login" Height="450" Width="800" Background="#2C3E50" WindowStartupLocation="CenterScreen">
-  <Grid>
-    <Border Width="350" Height="300" Background="#ECF0F1" CornerRadius="10" VerticalAlignment="Center" HorizontalAlignment="Center">
-      <Grid Margin="20">
-        <Grid.RowDefinitions>
-          <RowDefinition Height="Auto"/>
-          <RowDefinition Height="Auto"/>
-          <RowDefinition Height="20"/>
-          <RowDefinition Height="Auto"/>
-          <RowDefinition Height="Auto"/>
-        </Grid.RowDefinitions>
+        Title="Login"
+        WindowState="Maximized"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        Background="White">
 
-        <TextBlock Text="MoneyMind Login" FontSize="20" FontWeight="Bold" Foreground="#2C3E50" HorizontalAlignment="Center" Margin="0,10,0,20"/>
+    <Grid>
+        <Button x:Name="FullscreenToggleButton" Content="⤢" Width="40" Height="40" FontSize="18" 
+                FontWeight="Bold" Background="Transparent" Foreground="#DAA520"
+                BorderBrush="Transparent" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="10"
+                Click="ToggleWindowMode_Click" ToolTip="Toggle fullscreen" />
 
-        <Grid Grid.Row="1">
-          <TextBox x:Name="txtUsername" Width="250" Height="35" Background="#FFFFFF" BorderThickness="1"/>
-          <TextBlock Text="Benutzername" Foreground="Gray" Margin="5,0,0,0" VerticalAlignment="Center" IsHitTestVisible="False"/>
-        </Grid>
+        <Border Background="White" BorderBrush="#DAA520" BorderThickness="3" CornerRadius="20"
+                Padding="40" MinWidth="400" MaxWidth="800" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="20"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="20"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
 
-        <Grid Grid.Row="3">
-          <PasswordBox x:Name="txtPassword" Width="250" Height="35" Background="#FFFFFF" BorderThickness="1"/>
-          <TextBlock Text="Passwort" Foreground="Gray" Margin="5,0,0,0" VerticalAlignment="Center" IsHitTestVisible="False"/>
-        </Grid>
+                <TextBlock Grid.Row="0" Text="MoneyMind Login" FontSize="32" FontWeight="Bold" 
+                           Foreground="#DAA520" HorizontalAlignment="Center" Margin="0,0,0,10"/>
 
-        <Button Content="Login" Width="250" Height="40" Background="#2980B9" Foreground="White" FontWeight="Bold" BorderThickness="0" Grid.Row="4" Margin="0,10,0,0" Click="BtnLogin_Click"/>
-        <Button Content="Registrieren" Width="250" Height="40" Background="#27AE60" Foreground="White" FontWeight="Bold" BorderThickness="0" Grid.Row="4" Margin="30,63,30,-53" Click="BtnRegister_Click"/>
-      </Grid>
-    </Border>
-  </Grid>
+                <TextBlock Grid.Row="2" Text="Username" FontSize="16" Foreground="Gray" Margin="0,0,0,5"/>
+                <TextBox Grid.Row="3" x:Name="txtUsername" Height="40" FontSize="16" Padding="10"
+                         BorderBrush="#DAA520" BorderThickness="1"/>
+
+                <TextBlock Grid.Row="5" Text="Password" FontSize="16" Foreground="Gray" Margin="0,0,0,5"/>
+                <PasswordBox Grid.Row="6" x:Name="txtPassword" Height="40" FontSize="16" Padding="10"
+                             BorderBrush="#DAA520" BorderThickness="1"/>
+
+                <Button Grid.Row="8" Content="Login" Height="45" Background="#DAA520" 
+                        Foreground="White" FontWeight="Bold" FontSize="16" BorderThickness="0"
+                        Margin="0,10,0,0" Click="BtnLogin_Click">
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="Background" Value="#DAA520"/>
+                            <Setter Property="Foreground" Value="White"/>
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="#b58900"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+                </Button>
+
+                <Button Grid.Row="9" Content="Register" Height="45" Background="Transparent" 
+                        BorderBrush="#DAA520" BorderThickness="2" Foreground="#DAA520"
+                        FontWeight="Bold" FontSize="16" Margin="0,10,0,0" Click="BtnRegister_Click">
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="Background" Value="Transparent"/>
+                            <Setter Property="Foreground" Value="#DAA520"/>
+                            <Setter Property="BorderBrush" Value="#DAA520"/>
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="#f6e8c3"/>
+                                    <Setter Property="Foreground" Value="#a67900"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+                </Button>
+            </Grid>
+        </Border>
+    </Grid>
 </Window>
