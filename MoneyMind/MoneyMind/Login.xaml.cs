@@ -29,25 +29,33 @@ namespace MoneyMind
 
     private void BtnRegister_Click(object sender, RoutedEventArgs e)
     {
+
       string username = txtUsername.Text;
       string password = txtPassword.Password;
-
-      using (var connection = new SQLiteConnection(connectionString))
+      if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
       {
-        connection.Open();
-        string query = "INSERT INTO users (username, password) VALUES (@username, @password)";
-        using (var command = new SQLiteCommand(query, connection))
+        MessageBox.Show("Bitte geben Sie einen Benutzernamen und ein Passwort ein.");
+        return;
+      }
+      else
+      {
+        using (var connection = new SQLiteConnection(connectionString))
         {
-          command.Parameters.AddWithValue("@username", username);
-          command.Parameters.AddWithValue("@password", password);
-          try
+          connection.Open();
+          string query = "INSERT INTO users (username, password) VALUES (@username, @password)";
+          using (var command = new SQLiteCommand(query, connection))
           {
-            command.ExecuteNonQuery();
-            MessageBox.Show("Registrierung erfolgreich!");
-          }
-          catch (Exception ex)
-          {
-            MessageBox.Show("Fehler: " + ex.Message);
+            command.Parameters.AddWithValue("@username", username);
+            command.Parameters.AddWithValue("@password", password);
+            try
+            {
+              command.ExecuteNonQuery();
+              MessageBox.Show("Registrierung erfolgreich!");
+            }
+            catch (Exception ex)
+            {
+              MessageBox.Show("Fehler: " + ex.Message);
+            }
           }
         }
       }
