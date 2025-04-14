@@ -62,7 +62,6 @@ C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\MoneyMind\obj\Debu
 C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\MoneyMind\obj\Debug\net8.0-windows\MainWindow.g.cs
 C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\MoneyMind\obj\Debug\net8.0-windows\App.g.cs
 C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\MoneyMind\obj\Debug\net8.0-windows\MoneyMind_MarkupCompile.cache
-C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\MoneyMind\obj\Debug\net8.0-windows\MoneyMind_MarkupCompile.lref
 C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\MoneyMind\obj\Debug\net8.0-windows\MainWindow.baml
 C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\MoneyMind\obj\Debug\net8.0-windows\MoneyMind.g.resources
 C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\MoneyMind\obj\Debug\net8.0-windows\MoneyMind.GeneratedMSBuildEditorConfig.editorconfig
