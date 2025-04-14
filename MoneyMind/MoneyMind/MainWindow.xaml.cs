@@ -19,6 +19,7 @@ namespace MoneyMind
     public MainWindow()
     {
       InitializeComponent();
+
     }
   }
 }
