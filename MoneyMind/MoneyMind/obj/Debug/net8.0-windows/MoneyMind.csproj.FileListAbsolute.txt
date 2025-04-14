@@ -37,3 +37,42 @@ C:\Users\timon\OneDrive - sluz\IMS Sursee_Luzern 2023-24\BBZW Sursee\Semester 4\
 C:\Users\timon\OneDrive - sluz\IMS Sursee_Luzern 2023-24\BBZW Sursee\Semester 4\IPT6.1\IPT6.1\MoneyMind\MoneyMind\obj\Debug\net8.0-windows\MoneyMind.pdb
 C:\Users\timon\OneDrive - sluz\IMS Sursee_Luzern 2023-24\BBZW Sursee\Semester 4\IPT6.1\IPT6.1\MoneyMind\MoneyMind\obj\Debug\net8.0-windows\MoneyMind.genruntimeconfig.cache
 C:\Users\timon\OneDrive - sluz\IMS Sursee_Luzern 2023-24\BBZW Sursee\Semester 4\IPT6.1\IPT6.1\MoneyMind\MoneyMind\obj\Debug\net8.0-windows\ref\MoneyMind.dll
+C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\MoneyMind.exe
+C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\MoneyMind.deps.json
+C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\MoneyMind.runtimeconfig.json
+C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\MoneyMind.dll
+C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\MoneyMind.pdb
+C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\EntityFramework.SqlServer.dll
+C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\EntityFramework.dll
+C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\System.Data.SQLite.dll
+C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\System.Data.SqlClient.dll
+C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\System.Data.SQLite.EF6.dll
+C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\runtimes\win-arm64\native\sni.dll
+C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\runtimes\win-x64\native\sni.dll
+C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\runtimes\win-x86\native\sni.dll
+C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\runtimes\linux-x64\native\SQLite.Interop.dll
+C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\runtimes\osx-x64\native\SQLite.Interop.dll
+C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\runtimes\win-x64\native\SQLite.Interop.dll
+C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\runtimes\win-x86\native\SQLite.Interop.dll
+C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\MoneyMind\obj\Debug\net8.0-windows\MoneyMind.csproj.AssemblyReference.cache
+C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\MoneyMind\obj\Debug\net8.0-windows\Login.baml
+C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\MoneyMind\obj\Debug\net8.0-windows\Login.g.cs
+C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\MoneyMind\obj\Debug\net8.0-windows\MainWindow.g.cs
+C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\MoneyMind\obj\Debug\net8.0-windows\App.g.cs
+C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\MoneyMind\obj\Debug\net8.0-windows\MoneyMind_MarkupCompile.cache
+C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\MoneyMind\obj\Debug\net8.0-windows\MoneyMind_MarkupCompile.lref
+C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\MoneyMind\obj\Debug\net8.0-windows\MainWindow.baml
+C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\MoneyMind\obj\Debug\net8.0-windows\MoneyMind.g.resources
+C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\MoneyMind\obj\Debug\net8.0-windows\MoneyMind.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\MoneyMind\obj\Debug\net8.0-windows\MoneyMind.AssemblyInfoInputs.cache
+C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\MoneyMind\obj\Debug\net8.0-windows\MoneyMind.AssemblyInfo.cs
+C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\MoneyMind\obj\Debug\net8.0-windows\MoneyMind.csproj.CoreCompileInputs.cache
+C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\MoneyMind\obj\Debug\net8.0-windows\MoneyMind.sourcelink.json
+C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\MoneyMind\obj\Debug\net8.0-windows\MoneyMind.csproj.Up2Date
+C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\MoneyMind\obj\Debug\net8.0-windows\MoneyMind.dll
+C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\MoneyMind\obj\Debug\net8.0-windows\refint\MoneyMind.dll
+C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\MoneyMind\obj\Debug\net8.0-windows\MoneyMind.pdb
+C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\MoneyMind\obj\Debug\net8.0-windows\MoneyMind.genruntimeconfig.cache
+C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\MoneyMind\obj\Debug\net8.0-windows\ref\MoneyMind.dll
