@@ -42,7 +42,8 @@ namespace MoneyMind
 
         private void OpenTracking_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Navigating to I & E");
+          this.Close();
+          
         }
 
         private void OpenGoals_Click(object sender, RoutedEventArgs e)
