@@ -53,7 +53,7 @@ namespace MoneyMind {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/MoneyMind;V1.0.0.0;component/expenses.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/MoneyMind;component/expenses.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\expenses.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

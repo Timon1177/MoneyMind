@@ -5,10 +5,74 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MoneyMind"
         mc:Ignorable="d"
+        Title="MoneyMind"
         WindowState="Maximized"
         WindowStyle="None"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        ResizeMode="NoResize"
+        Background="White"
+        Height="450" Width="800">
+  <Grid>
+    <Button x:Name="FullscreenToggleButton"
+                Content="⤢"
+                Width="40" Height="40"
+                FontSize="18" FontWeight="Bold"
+                Background="Transparent"
+                Foreground="#DAA520"
+                BorderBrush="Transparent"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Top"
+                Margin="10"
+                Click="ToggleWindowMode_Click"
+                ToolTip="Toggle fullscreen" />
 
-    </Grid>
+    <Border Background="White"
+                BorderBrush="#DAA520"
+                BorderThickness="3"
+                CornerRadius="20"
+                Padding="40"
+                MinWidth="400"
+                MaxWidth="800"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center">
+      <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+
+        <TextBlock Text="Welcome to MoneyMind"
+                           FontSize="32" FontWeight="Bold"
+                           Foreground="#DAA520"
+                           TextAlignment="Center"
+                           Margin="0,0,0,20"/>
+
+        <!-- Saldo -->
+        <StackPanel Margin="0,0,0,20">
+          <TextBlock Text="Your Current Balance"
+                               FontSize="18"
+                               Foreground="Gray"
+                               HorizontalAlignment="Center" />
+          <TextBlock x:Name="SaldoText"
+                               Text="CHF 3'250.00"
+                               FontSize="28"
+                               FontWeight="Bold"
+                               Foreground="#DAA520"
+                               HorizontalAlignment="Center"/>
+        </StackPanel>
+        <Button Content="Income &amp; Expense Tracking"
+                        Height="50" FontSize="16" FontWeight="Bold"
+                        Background="#DAA520" Foreground="White"
+                        BorderThickness="0" Margin="0,10"
+                        Click="OpenTracking_Click"/>
+
+        <Button Content="Savings Goals"
+                        Height="50" FontSize="16" FontWeight="Bold"
+                        Background="#DAA520" Foreground="White"
+                        BorderThickness="0" Margin="0,10"
+                        Click="OpenGoals_Click"/>
+
+        <Button Content="User Management"
+                        Height="50" FontSize="16" FontWeight="Bold"
+                        Background="#DAA520" Foreground="White"
+                        BorderThickness="0" Margin="0,10"
+                        Click="OpenUser_Click"/>
+      </StackPanel>
+    </Border>
+  </Grid>
 </Window>
