@@ -75,7 +75,9 @@ C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\MoneyMind\obj\Debu
 C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\MoneyMind\obj\Debug\net8.0-windows\MoneyMind.pdb
 C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\MoneyMind\obj\Debug\net8.0-windows\MoneyMind.genruntimeconfig.cache
 C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\MoneyMind\obj\Debug\net8.0-windows\ref\MoneyMind.dll
-C:\Users\timon\OneDrive - sluz\IMS Sursee_Luzern 2023-24\BBZW Sursee\Semester 4\IPT6.1\IPT6.1\MoneyMind\MoneyMind\obj\Debug\net8.0-windows\expenses.g.cs
-C:\Users\timon\OneDrive - sluz\IMS Sursee_Luzern 2023-24\BBZW Sursee\Semester 4\IPT6.1\IPT6.1\MoneyMind\MoneyMind\obj\Debug\net8.0-windows\income.g.cs
-C:\Users\timon\OneDrive - sluz\IMS Sursee_Luzern 2023-24\BBZW Sursee\Semester 4\IPT6.1\IPT6.1\MoneyMind\MoneyMind\obj\Debug\net8.0-windows\expenses.baml
-C:\Users\timon\OneDrive - sluz\IMS Sursee_Luzern 2023-24\BBZW Sursee\Semester 4\IPT6.1\IPT6.1\MoneyMind\MoneyMind\obj\Debug\net8.0-windows\income.baml
+C:\Users\timon\OneDrive - sluz\IMS Sursee_Luzern 2023-24\BBZW Sursee\Semester 4\IPT6.1\IPT6.1\MoneyMind\MoneyMind\obj\Debug\net8.0-windows\StartPage.g.cs
+C:\Users\timon\OneDrive - sluz\IMS Sursee_Luzern 2023-24\BBZW Sursee\Semester 4\IPT6.1\IPT6.1\MoneyMind\MoneyMind\obj\Debug\net8.0-windows\IncomePage.g.cs
+C:\Users\timon\OneDrive - sluz\IMS Sursee_Luzern 2023-24\BBZW Sursee\Semester 4\IPT6.1\IPT6.1\MoneyMind\MoneyMind\obj\Debug\net8.0-windows\IncomePage.baml
+C:\Users\timon\OneDrive - sluz\IMS Sursee_Luzern 2023-24\BBZW Sursee\Semester 4\IPT6.1\IPT6.1\MoneyMind\MoneyMind\obj\Debug\net8.0-windows\StartPage.baml
+C:\Users\timon\OneDrive - sluz\IMS Sursee_Luzern 2023-24\BBZW Sursee\Semester 4\IPT6.1\IPT6.1\MoneyMind\MoneyMind\obj\Debug\net8.0-windows\SavingGoals.g.cs
+C:\Users\timon\OneDrive - sluz\IMS Sursee_Luzern 2023-24\BBZW Sursee\Semester 4\IPT6.1\IPT6.1\MoneyMind\MoneyMind\obj\Debug\net8.0-windows\SavingGoals.baml

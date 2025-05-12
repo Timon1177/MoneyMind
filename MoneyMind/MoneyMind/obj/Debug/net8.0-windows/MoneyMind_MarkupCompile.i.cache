@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 C:\Users\timon\OneDrive - sluz\IMS Sursee_Luzern 2023-24\BBZW Sursee\Semester 4\IPT6.1\IPT6.1\MoneyMind\MoneyMind\App.xaml
-4252333903
+51888113325
 
-91259792941
+10321294198
 2031471825798
-expenses.xaml;income.xaml;Login.xaml;MainWindow.xaml;
+IncomePage.xaml;Login.xaml;MainWindow.xaml;SavingGoals.xaml;StartPage.xaml;
 
 True
 

@@ -7,27 +7,33 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="expenses.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="income.xaml.cs">
+    <Compile Update="IncomePage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Login.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="SavingGoals.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="StartPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="expenses.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="income.xaml">
+    <Page Update="IncomePage.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Login.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="SavingGoals.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="StartPage.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

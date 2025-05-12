@@ -1,64 +1,39 @@
-﻿using System.Text;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace MoneyMind
 {
-  /// <summary>
-  /// Interaction logic for MainWindow.xaml
-  /// </summary>
   public partial class MainWindow : Window
   {
-        public MainWindow()
-        {
-            InitializeComponent();
+    public MainWindow()
+    {
+      InitializeComponent();
+      MainFrame.Navigate(new StartPage()); // ← Hier StartPage statt HomePage
+    }
 
-            decimal currentBalance = GetCurrentBalance();
-            SaldoText.Text = $"CHF {currentBalance:N2}";
-        }
+    private void NavigateHome_Click(object sender, RoutedEventArgs e)
+    {
+      MainFrame.Navigate(new StartPage()); // ← Hier auch
+    }
 
-        private void ToggleWindowMode_Click(object sender, RoutedEventArgs e)
-        {
-            if (this.WindowState == WindowState.Maximized && this.WindowStyle == WindowStyle.None)
-            {
-                this.WindowStyle = WindowStyle.SingleBorderWindow;
-                this.WindowState = WindowState.Normal;
-                FullscreenToggleButton.Content = "🗗";
-            }
-            else
-            {
-                this.WindowStyle = WindowStyle.None;
-                this.WindowState = WindowState.Maximized;
-                FullscreenToggleButton.Content = "⤢";
-            }
-        }
+    private void NavigateIncome_Click(object sender, RoutedEventArgs e)
+    {
+      MainFrame.Navigate(new IncomePage());
+    }
 
-        private void OpenTracking_Click(object sender, RoutedEventArgs e)
-        {
-          this.Close();
-          
-        }
+    private void NavigateGoals_Click(object sender, RoutedEventArgs e)
+    {
+      MainFrame.Navigate(new SavingGoals());
+    }
 
-        private void OpenGoals_Click(object sender, RoutedEventArgs e)
-        {
-            MessageBox.Show("Navigating to S G");
-        }
+    private void NavigateUser_Click(object sender, RoutedEventArgs e)
+    {
+      //MainFrame.Navigate(new UserPage());
+    }
 
-        private void OpenUser_Click(object sender, RoutedEventArgs e)
-        {
-            MessageBox.Show("Navigating to U M");
-        }
-        private decimal GetCurrentBalance()
-        {
-            // Timon hier bitte echter Saldo von Datenbank
-            return 3250.00m; //Temporär
-        }
+    private void ExitApp_Click(object sender, RoutedEventArgs e)
+    {
+      Application.Current.Shutdown();
+    }
   }
 }
