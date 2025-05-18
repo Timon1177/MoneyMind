@@ -1,0 +1,49 @@
+﻿<Window x:Class="MoneyMind.Register"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Register"
+        WindowStartupLocation="CenterScreen"
+        WindowState="Maximized"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        Background="White">
+
+    <Grid>
+        <Border Background="White" BorderBrush="#DAA520" BorderThickness="3" CornerRadius="20"
+                Padding="40" MinWidth="400" MaxWidth="800" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <StackPanel>
+                <TextBlock Text="Register" FontSize="28" FontWeight="Bold" Foreground="#DAA520" 
+                           TextAlignment="Center" Margin="0 0 0 20"/>
+
+                <TextBlock Text="First Name" FontWeight="SemiBold" Foreground="Gray" Margin="0 10 0 0"/>
+                <TextBox Name="txtFirstName" Height="35" Margin="0 0 0 5" BorderBrush="#DAA520" BorderThickness="1"/>
+
+                <TextBlock Text="Last Name" FontWeight="SemiBold" Foreground="Gray" Margin="0 10 0 0"/>
+                <TextBox Name="txtLastName" Height="35" Margin="0 0 0 5" BorderBrush="#DAA520" BorderThickness="1"/>
+
+                <TextBlock Text="Email" FontWeight="SemiBold" Foreground="Gray" Margin="0 10 0 0"/>
+                <TextBox Name="txtEmail" Height="35" Margin="0 0 0 5" BorderBrush="#DAA520" BorderThickness="1"/>
+
+                <TextBlock Text="Username" FontWeight="SemiBold" Foreground="Gray" Margin="0 10 0 0"/>
+                <TextBox Name="txtUsername" Height="35" Margin="0 0 0 5" BorderBrush="#DAA520" BorderThickness="1"/>
+
+                <TextBlock Text="Password" FontWeight="SemiBold" Foreground="Gray" Margin="0 10 0 0"/>
+                <PasswordBox Name="txtPassword" Height="35" Margin="0 0 0 5" BorderBrush="#DAA520" BorderThickness="1"/>
+
+                <!-- Register Button -->
+                <Button Content="Register" Click="BtnRegister_Click" 
+                        Background="#DAA520" Foreground="White" Height="45" Margin="0 20 0 10"
+                        FontWeight="Bold" BorderThickness="0"
+                        HorizontalAlignment="Center" Width="200" 
+                        Padding="10" Cursor="Hand"/>
+
+                <!-- Back Button -->
+                <Button Content="Back to Login" Click="BtnBack_Click"
+                        Background="White" Foreground="#DAA520" Height="45"
+                        FontWeight="Bold" BorderBrush="#DAA520" BorderThickness="2"
+                        HorizontalAlignment="Center" Width="200" 
+                        Padding="10" Cursor="Hand"/>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>

@@ -16,50 +16,26 @@ namespace MoneyMind
 
     private void InitializeDatabase()
     {
-      using (var connection = new SQLiteConnection(connectionString))
-      {
-        connection.Open();
-        string query = "CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY, username TEXT UNIQUE, password TEXT);";
-        using (var command = new SQLiteCommand(query, connection))
+        using (var connection = new SQLiteConnection(connectionString))
         {
-          command.ExecuteNonQuery();
+            connection.Open();
+            string query = @"
+                CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY, firstname TEXT, lastname TEXT, email TEXT, username TEXT UNIQUE, password TEXT);";
+            using (var command = new SQLiteCommand(query, connection))
+            {
+                command.ExecuteNonQuery();
+            }
         }
-      }
     }
+
 
     private void BtnRegister_Click(object sender, RoutedEventArgs e)
     {
-
-      string username = txtUsername.Text;
-      string password = txtPassword.Password;
-      if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
-      {
-        MessageBox.Show("Bitte geben Sie einen Benutzernamen und ein Passwort ein.");
-        return;
-      }
-      else
-      {
-        using (var connection = new SQLiteConnection(connectionString))
-        {
-          connection.Open();
-          string query = "INSERT INTO users (username, password) VALUES (@username, @password)";
-          using (var command = new SQLiteCommand(query, connection))
-          {
-            command.Parameters.AddWithValue("@username", username);
-            command.Parameters.AddWithValue("@password", password);
-            try
-            {
-              command.ExecuteNonQuery();
-              MessageBox.Show("Registrierung erfolgreich!");
-            }
-            catch (Exception ex)
-            {
-              MessageBox.Show("Fehler: " + ex.Message);
-            }
-          }
-        }
-      }
+      Register registerWindow = new Register();
+      registerWindow.Show();
+      this.Close();
     }
+
 
     private void BtnLogin_Click(object sender, RoutedEventArgs e)
     {
