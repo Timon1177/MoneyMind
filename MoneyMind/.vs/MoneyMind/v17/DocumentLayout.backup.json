@@ -1,8 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\timon\\OneDrive - sluz\\IMS Sursee_Luzern 2023-24\\BBZW Sursee\\Semester 4\\IPT6.1\\IPT6.1\\MoneyMind\\",
+  "WorkspaceRootPath": "C:\\Users\\kaytr\\Desktop\\Projekte\\MoneyMind\\MoneyMind\\",
   "Documents": [
     {
+<<<<<<< HEAD
       "AbsoluteMoniker": "D:0:0:{7F757A09-79B5-4647-BFE7-48E07AC8C147}|MoneyMind\\MoneyMind.csproj|c:\\users\\timon\\onedrive - sluz\\ims sursee_luzern 2023-24\\bbzw sursee\\semester 4\\ipt6.1\\ipt6.1\\moneymind\\moneymind\\savinggoals.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7F757A09-79B5-4647-BFE7-48E07AC8C147}|MoneyMind\\MoneyMind.csproj|solutionrelative:moneymind\\savinggoals.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -36,19 +37,18 @@
     },
     {
       "AbsoluteMoniker": "D:0:0:{7F757A09-79B5-4647-BFE7-48E07AC8C147}|MoneyMind\\MoneyMind.csproj|c:\\users\\timon\\onedrive - sluz\\ims sursee_luzern 2023-24\\bbzw sursee\\semester 4\\ipt6.1\\ipt6.1\\moneymind\\moneymind\\login.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+=======
+      "AbsoluteMoniker": "D:0:0:{7F757A09-79B5-4647-BFE7-48E07AC8C147}|MoneyMind\\MoneyMind.csproj|c:\\users\\kaytr\\desktop\\projekte\\moneymind\\moneymind\\moneymind\\register.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7F757A09-79B5-4647-BFE7-48E07AC8C147}|MoneyMind\\MoneyMind.csproj|solutionrelative:moneymind\\register.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F757A09-79B5-4647-BFE7-48E07AC8C147}|MoneyMind\\MoneyMind.csproj|c:\\users\\kaytr\\desktop\\projekte\\moneymind\\moneymind\\moneymind\\register.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{7F757A09-79B5-4647-BFE7-48E07AC8C147}|MoneyMind\\MoneyMind.csproj|solutionrelative:moneymind\\register.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7F757A09-79B5-4647-BFE7-48E07AC8C147}|MoneyMind\\MoneyMind.csproj|c:\\users\\kaytr\\desktop\\projekte\\moneymind\\moneymind\\moneymind\\login.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+>>>>>>> 99c045afa612d83eba9459f9d96762065c31f0cb
       "RelativeMoniker": "D:0:0:{7F757A09-79B5-4647-BFE7-48E07AC8C147}|MoneyMind\\MoneyMind.csproj|solutionrelative:moneymind\\login.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7F757A09-79B5-4647-BFE7-48E07AC8C147}|MoneyMind\\MoneyMind.csproj|c:\\users\\timon\\onedrive - sluz\\ims sursee_luzern 2023-24\\bbzw sursee\\semester 4\\ipt6.1\\ipt6.1\\moneymind\\moneymind\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{7F757A09-79B5-4647-BFE7-48E07AC8C147}|MoneyMind\\MoneyMind.csproj|solutionrelative:moneymind\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7F757A09-79B5-4647-BFE7-48E07AC8C147}|MoneyMind\\MoneyMind.csproj|c:\\users\\timon\\onedrive - sluz\\ims sursee_luzern 2023-24\\bbzw sursee\\semester 4\\ipt6.1\\ipt6.1\\moneymind\\moneymind\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7F757A09-79B5-4647-BFE7-48E07AC8C147}|MoneyMind\\MoneyMind.csproj|solutionrelative:moneymind\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7F757A09-79B5-4647-BFE7-48E07AC8C147}|MoneyMind\\MoneyMind.csproj|c:\\users\\timon\\onedrive - sluz\\ims sursee_luzern 2023-24\\bbzw sursee\\semester 4\\ipt6.1\\ipt6.1\\moneymind\\moneymind\\login.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{7F757A09-79B5-4647-BFE7-48E07AC8C147}|MoneyMind\\MoneyMind.csproj|solutionrelative:moneymind\\login.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -61,6 +61,7 @@
           "SelectedChildIndex": 1,
           "Children": [
             {
+<<<<<<< HEAD
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "IncomePage.xaml",
@@ -71,23 +72,39 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-04-14T08:30:51.299Z",
               "IsPinned": true
+=======
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+>>>>>>> 99c045afa612d83eba9459f9d96762065c31f0cb
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+<<<<<<< HEAD
               "Title": "SavingGoals.xaml.cs",
               "DocumentMoniker": "C:\\Users\\timon\\OneDrive - sluz\\IMS Sursee_Luzern 2023-24\\BBZW Sursee\\Semester 4\\IPT6.1\\IPT6.1\\MoneyMind\\MoneyMind\\SavingGoals.xaml.cs",
               "RelativeDocumentMoniker": "MoneyMind\\SavingGoals.xaml.cs",
               "ToolTip": "C:\\Users\\timon\\OneDrive - sluz\\IMS Sursee_Luzern 2023-24\\BBZW Sursee\\Semester 4\\IPT6.1\\IPT6.1\\MoneyMind\\MoneyMind\\SavingGoals.xaml.cs",
               "RelativeToolTip": "MoneyMind\\SavingGoals.xaml.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAowBoAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAowBUAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-12T09:12:36.23Z",
+=======
+              "Title": "Register.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\kaytr\\Desktop\\Projekte\\MoneyMind\\MoneyMind\\MoneyMind\\Register.xaml.cs",
+              "RelativeDocumentMoniker": "MoneyMind\\Register.xaml.cs",
+              "ToolTip": "C:\\Users\\kaytr\\Desktop\\Projekte\\MoneyMind\\MoneyMind\\MoneyMind\\Register.xaml.cs",
+              "RelativeToolTip": "MoneyMind\\Register.xaml.cs",
+              "ViewState": "AQIAABsAAAAAAAAAAAAYwCsAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-18T13:19:25.815Z",
+>>>>>>> 99c045afa612d83eba9459f9d96762065c31f0cb
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+<<<<<<< HEAD
               "Title": "SavingGoals.xaml",
               "DocumentMoniker": "C:\\Users\\timon\\OneDrive - sluz\\IMS Sursee_Luzern 2023-24\\BBZW Sursee\\Semester 4\\IPT6.1\\IPT6.1\\MoneyMind\\MoneyMind\\SavingGoals.xaml",
               "RelativeDocumentMoniker": "MoneyMind\\SavingGoals.xaml",
@@ -95,10 +112,20 @@
               "RelativeToolTip": "MoneyMind\\SavingGoals.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-05-12T09:11:50.309Z"
+=======
+              "Title": "Register.xaml",
+              "DocumentMoniker": "C:\\Users\\kaytr\\Desktop\\Projekte\\MoneyMind\\MoneyMind\\MoneyMind\\Register.xaml",
+              "RelativeDocumentMoniker": "MoneyMind\\Register.xaml",
+              "ToolTip": "C:\\Users\\kaytr\\Desktop\\Projekte\\MoneyMind\\MoneyMind\\MoneyMind\\Register.xaml",
+              "RelativeToolTip": "MoneyMind\\Register.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-05-18T13:19:10.054Z"
+>>>>>>> 99c045afa612d83eba9459f9d96762065c31f0cb
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+<<<<<<< HEAD
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "C:\\Users\\timon\\OneDrive - sluz\\IMS Sursee_Luzern 2023-24\\BBZW Sursee\\Semester 4\\IPT6.1\\IPT6.1\\MoneyMind\\MoneyMind\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "MoneyMind\\MainWindow.xaml.cs",
@@ -168,37 +195,16 @@
             {
               "$type": "Document",
               "DocumentIndex": 8,
+=======
+>>>>>>> 99c045afa612d83eba9459f9d96762065c31f0cb
               "Title": "Login.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\timon\\OneDrive - sluz\\IMS Sursee_Luzern 2023-24\\BBZW Sursee\\Semester 4\\IPT6.1\\IPT6.1\\MoneyMind\\MoneyMind\\Login.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\kaytr\\Desktop\\Projekte\\MoneyMind\\MoneyMind\\MoneyMind\\Login.xaml.cs",
               "RelativeDocumentMoniker": "MoneyMind\\Login.xaml.cs",
-              "ToolTip": "C:\\Users\\timon\\OneDrive - sluz\\IMS Sursee_Luzern 2023-24\\BBZW Sursee\\Semester 4\\IPT6.1\\IPT6.1\\MoneyMind\\MoneyMind\\Login.xaml.cs",
+              "ToolTip": "C:\\Users\\kaytr\\Desktop\\Projekte\\MoneyMind\\MoneyMind\\MoneyMind\\Login.xaml.cs",
               "RelativeToolTip": "MoneyMind\\Login.xaml.cs",
-              "ViewState": "AgIAACkAAAAAAAAAAAAgwFMAAAALAAAAAAAAAA==",
+              "ViewState": "AQIAABIAAAAAAAAAAAAAwBgAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-31T08:59:18.09Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "App.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\timon\\OneDrive - sluz\\IMS Sursee_Luzern 2023-24\\BBZW Sursee\\Semester 4\\IPT6.1\\IPT6.1\\MoneyMind\\MoneyMind\\App.xaml.cs",
-              "RelativeDocumentMoniker": "MoneyMind\\App.xaml.cs",
-              "ToolTip": "C:\\Users\\timon\\OneDrive - sluz\\IMS Sursee_Luzern 2023-24\\BBZW Sursee\\Semester 4\\IPT6.1\\IPT6.1\\MoneyMind\\MoneyMind\\App.xaml.cs",
-              "RelativeToolTip": "MoneyMind\\App.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-31T08:58:08.582Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Login.xaml",
-              "DocumentMoniker": "C:\\Users\\timon\\OneDrive - sluz\\IMS Sursee_Luzern 2023-24\\BBZW Sursee\\Semester 4\\IPT6.1\\IPT6.1\\MoneyMind\\MoneyMind\\Login.xaml",
-              "RelativeDocumentMoniker": "MoneyMind\\Login.xaml",
-              "ToolTip": "C:\\Users\\timon\\OneDrive - sluz\\IMS Sursee_Luzern 2023-24\\BBZW Sursee\\Semester 4\\IPT6.1\\IPT6.1\\MoneyMind\\MoneyMind\\Login.xaml",
-              "RelativeToolTip": "MoneyMind\\Login.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-03-31T08:47:52.745Z"
+              "WhenOpened": "2025-05-18T12:30:44.279Z"
             }
           ]
         }

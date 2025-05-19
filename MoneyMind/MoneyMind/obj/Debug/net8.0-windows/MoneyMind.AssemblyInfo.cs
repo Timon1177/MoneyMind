@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MoneyMind")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+73406968d125ff17de450980ce5a8d046ba3bf04")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6f4295539702eb01a6b339de583a2851b09774d3")]
 [assembly: System.Reflection.AssemblyProductAttribute("MoneyMind")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MoneyMind")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
