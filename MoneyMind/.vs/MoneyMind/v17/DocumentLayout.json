@@ -36,7 +36,7 @@
               "RelativeDocumentMoniker": "MoneyMind\\Register.xaml.cs",
               "ToolTip": "C:\\Users\\kaytr\\Desktop\\Projekte\\MoneyMind\\MoneyMind\\MoneyMind\\Register.xaml.cs",
               "RelativeToolTip": "MoneyMind\\Register.xaml.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAwAAAA",
+              "ViewState": "AQIAABsAAAAAAAAAAAAYwCsAAAAmAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-18T13:19:25.815Z",
               "EditorCaption": ""
@@ -50,8 +50,7 @@
               "ToolTip": "C:\\Users\\kaytr\\Desktop\\Projekte\\MoneyMind\\MoneyMind\\MoneyMind\\Register.xaml",
               "RelativeToolTip": "MoneyMind\\Register.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-05-18T13:19:10.054Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-18T13:19:10.054Z"
             },
             {
               "$type": "Document",
@@ -63,8 +62,7 @@
               "RelativeToolTip": "MoneyMind\\Login.xaml.cs",
               "ViewState": "AQIAABIAAAAAAAAAAAAAwBgAAAANAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-18T12:30:44.279Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-18T12:30:44.279Z"
             }
           ]
         }
