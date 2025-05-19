@@ -14,11 +14,11 @@
     <!-- Sidebar -->
     <StackPanel Background="#DAA520" Grid.Column="0">
       <TextBlock Text="MoneyMind" FontSize="24" FontWeight="Bold" Foreground="White" Margin="20"/>
-      <Button Content="🏠 Startseite" Click="NavigateHome_Click" Margin="10" Padding="10"/>
-      <Button Content="📊 Einnahmen &amp; Ausgaben" Click="NavigateIncome_Click" Margin="10" Padding="10"/>
-      <Button Content="💰 Sparziele" Click="NavigateGoals_Click" Margin="10" Padding="10"/>
-      <Button Content="👤 Benutzer" Click="NavigateUser_Click" Margin="10" Padding="10"/>
-      <Button Content="🗙 Beenden" Click="ExitApp_Click" Margin="10" Padding="10"/>
+      <Button Content="🏠 Home" Click="NavigateHome_Click" Margin="10" Padding="10"/>
+      <Button Content="📊 Income &amp; Expense" Click="NavigateIncome_Click" Margin="10" Padding="10"/>
+      <Button Content="💰 Savinggoals" Click="NavigateGoals_Click" Margin="10" Padding="10"/>
+      <Button Content="👤 User" Click="NavigateUser_Click" Margin="10" Padding="10"/>
+      <Button Content="🗙 Exit" Click="ExitApp_Click" Margin="10" Padding="10"/>
     </StackPanel>
 
     <!-- Hauptanzeigebereich -->
