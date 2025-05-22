@@ -33,6 +33,7 @@ namespace MoneyMind
 
     private void ExitApp_Click(object sender, RoutedEventArgs e)
     {
+      Database.Close();
       Application.Current.Shutdown();
     }
   }

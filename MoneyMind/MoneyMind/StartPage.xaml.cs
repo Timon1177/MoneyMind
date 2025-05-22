@@ -1,5 +1,7 @@
-﻿using System.Windows;
+﻿using System.Data.SQLite;
+using System.Windows;
 using System.Windows.Controls;
+using static MoneyMind.Login;
 
 namespace MoneyMind
 {
@@ -15,7 +17,27 @@ namespace MoneyMind
 
     private decimal GetCurrentBalance()
     {
-      return 3250.00m;
+      var connection = Database.Connection;
+      string query = "SELECT amount FROM balance WHERE fk_userID = @userID";
+
+      using (var command = new SQLiteCommand(query, connection))
+      {
+        command.Parameters.AddWithValue("@userID", CurrentUser.UserID);
+
+        object result = command.ExecuteScalar();
+        if (result != null && decimal.TryParse(result.ToString(), out decimal balance))
+        {
+          return balance;
+        }
+        else
+        {
+          return 0;
+        }
+      }
     }
+
+
+
+
   }
 }
