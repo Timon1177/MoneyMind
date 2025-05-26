@@ -9,21 +9,12 @@ MoneyMind
 none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
-<<<<<<< HEAD
 C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\App.xaml
-6-400337598
-
-121502155199
-203-2071324693
-IncomePage.xaml;Login.xaml;MainWindow.xaml;Register.xaml;SavingGoals.xaml;StartPage.xaml;
-=======
-C:\Users\timon\OneDrive - sluz\IMS Sursee_Luzern 2023-24\BBZW Sursee\Semester 4\IPT6.1\IPT6.1\MoneyMind\MoneyMind\App.xaml
 7882778463
 
 131552470895
-2031471825798
+203-2071324693
 IncomePage.xaml;Login.xaml;MainWindow.xaml;Register.xaml;SavingGoals.xaml;StartPage.xaml;UserPage.xaml;
->>>>>>> 6300a6e6cbd082ebf5f68bab67e6e3393424e537
 
 False
 

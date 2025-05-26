@@ -1,117 +1,86 @@
 ﻿<Page x:Class="MoneyMind.IncomePage"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-      mc:Ignorable="d"
       Title="IncomePage">
 
-    <ScrollViewer VerticalScrollBarVisibility="Auto">
-        <StackPanel Margin="20">
+    <Grid Background="White">
+        <Border Background="White"
+                BorderBrush="#DAA520"
+                BorderThickness="3"
+                CornerRadius="20"
+                Padding="30"
+                MinWidth="400"
+                MaxWidth="900"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center">
 
-            <!-- Einkommen Abschnitt -->
-            <TextBlock Text="Einnahmen"
-                       FontSize="24"
-                       FontWeight="Bold"
-                       Foreground="#246795"
-                       Margin="0,10" />
-            <TextBlock Text="Gesamteinnahmen: 0 CHF"
-                       x:Name="txtTotalIncome"
-                       FontSize="16"
-                       FontWeight="SemiBold"
-                       Margin="0,0,0,10" />
+            <ScrollViewer VerticalScrollBarVisibility="Auto">
+                <StackPanel>
 
-            <Button Content="+ Neue Einnahme"
-                    Click="AddIncome_Click"
-                    Width="160"
-                    Margin="0,0,0,10" />
+                    <!-- Einnahmen -->
+                    <TextBlock Text="Einnahmen" FontSize="26" FontWeight="Bold" Foreground="#246795" Margin="0,10" />
+                    <TextBlock x:Name="txtTotalIncome" Text="Gesamteinnahmen: 0 CHF" FontSize="16" Margin="0,0,0,10" />
 
-            <DataGrid x:Name="dgIncome"
-                      AutoGenerateColumns="False"
-                      CanUserAddRows="False"
-                      Margin="0,0,0,20"
-                      ItemsSource="{Binding Incomes}">
-                <DataGrid.Columns>
-                    <DataGridTextColumn Header="Kategorie" Binding="{Binding Category}" Width="*" />
-                    <DataGridTextColumn Header="Betrag (CHF)" Binding="{Binding Amount}" Width="*" />
-                    <DataGridTemplateColumn Header="Aktion" Width="Auto">
-                        <DataGridTemplateColumn.CellTemplate>
-                            <DataTemplate>
-                                <Button Content="Löschen"
-                                        Click="DeleteIncome_Click"
-                                        Tag="{Binding Id}" />
-                            </DataTemplate>
-                        </DataGridTemplateColumn.CellTemplate>
-                    </DataGridTemplateColumn>
-                </DataGrid.Columns>
-            </DataGrid>
+                    <Button Content="+ Neue Einnahme" Click="AddIncome_Click"
+                            Width="160" Height="35" Background="#246795" Foreground="White"
+                            FontWeight="SemiBold" HorizontalAlignment="Left" Margin="0,0,0,10" />
 
-            <!-- Ausgaben Abschnitt -->
-            <TextBlock Text="Ausgaben"
-                       FontSize="24"
-                       FontWeight="Bold"
-                       Foreground="#246795"
-                       Margin="0,10" />
-            <TextBlock Text="Gesamtausgaben: 0 CHF"
-                       x:Name="txtTotalExpense"
-                       FontSize="16"
-                       FontWeight="SemiBold"
-                       Margin="0,0,0,10" />
+                    <DataGrid x:Name="dgIncome" AutoGenerateColumns="False" CanUserAddRows="False" Margin="0,0,0,20" ItemsSource="{Binding Incomes}" ColumnHeaderHeight="30" RowHeight="30">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Kategorie" Binding="{Binding Category}" Width="*" />
+                            <DataGridTextColumn Header="Betrag (CHF)" Binding="{Binding Amount}" Width="*" />
+                            <DataGridTemplateColumn Header="Aktion" Width="Auto">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Button Content="Löschen" Click="DeleteIncome_Click" Tag="{Binding Id}" />
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                        </DataGrid.Columns>
+                    </DataGrid>
 
-            <Button Content="+ Neue Ausgabe"
-                    Click="AddExpense_Click"
-                    Width="160"
-                    Margin="0,0,0,10" />
+                    <!-- Ausgaben -->
+                    <TextBlock Text="Ausgaben" FontSize="26" FontWeight="Bold" Foreground="#246795" Margin="0,10" />
+                    <TextBlock x:Name="txtTotalExpense" Text="Gesamtausgaben: 0 CHF" FontSize="16" Margin="0,0,0,10" />
 
-            <!-- Fixkosten -->
-            <TextBlock Text="Fixkosten"
-                       FontSize="18"
-                       FontWeight="SemiBold"
-                       Margin="0,10,0,5" />
-            <DataGrid x:Name="dgFixedExpenses"
-                      AutoGenerateColumns="False"
-                      CanUserAddRows="False"
-                      Margin="0,0,0,20"
-                      ItemsSource="{Binding FixedExpenses}">
-                <DataGrid.Columns>
-                    <DataGridTextColumn Header="Kategorie" Binding="{Binding Category}" Width="*" />
-                    <DataGridTextColumn Header="Betrag (CHF)" Binding="{Binding Amount}" Width="*" />
-                    <DataGridTemplateColumn Header="Aktion" Width="Auto">
-                        <DataGridTemplateColumn.CellTemplate>
-                            <DataTemplate>
-                                <Button Content="Löschen"
-                                        Click="DeleteFixedExpense_Click"
-                                        Tag="{Binding Id}" />
-                            </DataTemplate>
-                        </DataGridTemplateColumn.CellTemplate>
-                    </DataGridTemplateColumn>
-                </DataGrid.Columns>
-            </DataGrid>
+                    <Button Content="+ Neue Ausgabe" Click="AddExpense_Click"
+                            Width="160" Height="35" Background="#246795" Foreground="White"
+                            FontWeight="SemiBold" HorizontalAlignment="Left" Margin="0,0,0,10" />
 
-            <!-- Sonstige Ausgaben -->
-            <TextBlock Text="Sonstige Ausgaben"
-                       FontSize="18"
-                       FontWeight="SemiBold"
-                       Margin="0,10,0,5" />
-            <DataGrid x:Name="dgOtherExpenses"
-                      AutoGenerateColumns="False"
-                      CanUserAddRows="False"
-                      ItemsSource="{Binding OtherExpenses}">
-                <DataGrid.Columns>
-                    <DataGridTextColumn Header="Kategorie" Binding="{Binding Category}" Width="*" />
-                    <DataGridTextColumn Header="Betrag (CHF)" Binding="{Binding Amount}" Width="*" />
-                    <DataGridTemplateColumn Header="Aktion" Width="Auto">
-                        <DataGridTemplateColumn.CellTemplate>
-                            <DataTemplate>
-                                <Button Content="Löschen"
-                                        Click="DeleteOtherExpense_Click"
-                                        Tag="{Binding Id}" />
-                            </DataTemplate>
-                        </DataGridTemplateColumn.CellTemplate>
-                    </DataGridTemplateColumn>
-                </DataGrid.Columns>
-            </DataGrid>
+                    <!-- Fixkosten -->
+                    <TextBlock Text="Fixkosten" FontSize="18" FontWeight="SemiBold" Margin="0,20,0,5" />
+                    <DataGrid x:Name="dgFixedExpenses" AutoGenerateColumns="False" CanUserAddRows="False" Margin="0,0,0,20" ItemsSource="{Binding FixedExpenses}">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Kategorie" Binding="{Binding Category}" Width="*" />
+                            <DataGridTextColumn Header="Betrag (CHF)" Binding="{Binding Amount}" Width="*" />
+                            <DataGridTemplateColumn Header="Aktion" Width="Auto">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Button Content="Löschen" Click="DeleteFixedExpense_Click" Tag="{Binding Id}" />
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                        </DataGrid.Columns>
+                    </DataGrid>
 
-        </StackPanel>
-    </ScrollViewer>
+                    <!-- Sonstige Ausgaben -->
+                    <TextBlock Text="Sonstige Ausgaben" FontSize="18" FontWeight="SemiBold" Margin="0,20,0,5" />
+                    <DataGrid x:Name="dgOtherExpenses" AutoGenerateColumns="False" CanUserAddRows="False" ItemsSource="{Binding OtherExpenses}">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Kategorie" Binding="{Binding Category}" Width="*" />
+                            <DataGridTextColumn Header="Betrag (CHF)" Binding="{Binding Amount}" Width="*" />
+                            <DataGridTemplateColumn Header="Aktion" Width="Auto">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Button Content="Löschen" Click="DeleteOtherExpense_Click" Tag="{Binding Id}" />
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                        </DataGrid.Columns>
+                    </DataGrid>
+
+                </StackPanel>
+            </ScrollViewer>
+        </Border>
+    </Grid>
 </Page>
