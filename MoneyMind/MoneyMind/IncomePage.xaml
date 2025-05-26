@@ -17,62 +17,123 @@
             <ScrollViewer VerticalScrollBarVisibility="Auto">
                 <StackPanel>
 
-                    <!-- Einnahmen -->
-                    <TextBlock Text="Einnahmen" FontSize="26" FontWeight="Bold" Foreground="#246795" Margin="0,10" />
-                    <TextBlock x:Name="txtTotalIncome" Text="Gesamteinnahmen: 0 CHF" FontSize="16" Margin="0,0,0,10" />
+                    <!-- INCOME SECTION -->
+                    <TextBlock Text="Income" FontSize="26" FontWeight="Bold" Foreground="#DAA520" Margin="0,10" />
+                    <TextBlock x:Name="txtTotalIncome" Text="Total income: 0.00 CHF" FontSize="16" Margin="0,0,0,10" />
 
-                    <Button Content="+ Neue Einnahme" Click="AddIncome_Click"
-                            Width="160" Height="35" Background="#246795" Foreground="White"
-                            FontWeight="SemiBold" HorizontalAlignment="Left" Margin="0,0,0,10" />
+                    <Button Content="+ Add Income" Click="ToggleIncomeForm_Click"
+                            Width="160" Height="40" Background="#DAA520" Foreground="White"
+                            FontWeight="Bold" BorderThickness="0" HorizontalAlignment="Left" Margin="0,0,0,10" Cursor="Hand" />
 
-                    <DataGrid x:Name="dgIncome" AutoGenerateColumns="False" CanUserAddRows="False" Margin="0,0,0,20" ItemsSource="{Binding Incomes}" ColumnHeaderHeight="30" RowHeight="30">
+                    <!-- INCOME INPUT FORM -->
+                    <StackPanel x:Name="IncomeForm" Visibility="Collapsed" Margin="0,0,0,10">
+                        <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
+                            <TextBlock Text="Category:" Width="80" VerticalAlignment="Center"/>
+                            <TextBox x:Name="IncomeCategoryInput" Width="200"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                            <TextBlock Text="Amount (CHF):" Width="80" VerticalAlignment="Center"/>
+                            <TextBox x:Name="IncomeAmountInput" Width="200"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                            <Button Content="Save" Click="SaveIncome_Click" Background="#DAA520" Foreground="White" Width="100" Margin="0,0,10,0" />
+                            <Button Content="Cancel" Click="CancelIncomeForm_Click" Background="LightGray" Width="100" />
+                        </StackPanel>
+                    </StackPanel>
+
+                    <DataGrid x:Name="dgIncome" AutoGenerateColumns="False" CanUserAddRows="False" Margin="0,0,0,20"
+                              ItemsSource="{Binding Incomes}" ColumnHeaderHeight="30" RowHeight="30">
                         <DataGrid.Columns>
-                            <DataGridTextColumn Header="Kategorie" Binding="{Binding Category}" Width="*" />
-                            <DataGridTextColumn Header="Betrag (CHF)" Binding="{Binding Amount}" Width="*" />
-                            <DataGridTemplateColumn Header="Aktion" Width="Auto">
+                            <DataGridTextColumn Header="Category" Binding="{Binding Category}" Width="*" />
+                            <DataGridTextColumn Header="Amount (CHF)" Binding="{Binding Amount}" Width="*" />
+                            <DataGridTemplateColumn Header="Action" Width="Auto">
                                 <DataGridTemplateColumn.CellTemplate>
                                     <DataTemplate>
-                                        <Button Content="Löschen" Click="DeleteIncome_Click" Tag="{Binding Id}" />
+                                        <Button Content="Delete" Click="DeleteIncome_Click"
+                                                Tag="{Binding Id}" Background="Tomato" Foreground="White"
+                                                BorderThickness="0" Padding="4,2" Cursor="Hand" />
                                     </DataTemplate>
                                 </DataGridTemplateColumn.CellTemplate>
                             </DataGridTemplateColumn>
                         </DataGrid.Columns>
                     </DataGrid>
 
-                    <!-- Ausgaben -->
-                    <TextBlock Text="Ausgaben" FontSize="26" FontWeight="Bold" Foreground="#246795" Margin="0,10" />
-                    <TextBlock x:Name="txtTotalExpense" Text="Gesamtausgaben: 0 CHF" FontSize="16" Margin="0,0,0,10" />
 
-                    <Button Content="+ Neue Ausgabe" Click="AddExpense_Click"
-                            Width="160" Height="35" Background="#246795" Foreground="White"
-                            FontWeight="SemiBold" HorizontalAlignment="Left" Margin="0,0,0,10" />
+                    <!-- EXPENSE SECTION -->
+                    <TextBlock Text="Expenses" FontSize="26" FontWeight="Bold" Foreground="#DAA520" Margin="0,10" />
+                    <TextBlock x:Name="txtTotalExpense" Text="Total expenses: 0.00 CHF" FontSize="16" Margin="0,0,0,10" />
 
-                    <!-- Fixkosten -->
-                    <TextBlock Text="Fixkosten" FontSize="18" FontWeight="SemiBold" Margin="0,20,0,5" />
-                    <DataGrid x:Name="dgFixedExpenses" AutoGenerateColumns="False" CanUserAddRows="False" Margin="0,0,0,20" ItemsSource="{Binding FixedExpenses}">
+                    <!-- FIXED COSTS -->
+                    <TextBlock Text="Fixed Costs" FontSize="18" FontWeight="SemiBold" Margin="0,20,0,5" />
+                    <Button Content="+ Add Fixed Expense" Click="ToggleFixedForm_Click"
+                            Width="180" Height="35" Background="#DAA520" Foreground="White"
+                            FontWeight="Bold" BorderThickness="0" HorizontalAlignment="Left" Margin="0,0,0,10" Cursor="Hand" />
+
+                    <!-- FIXED INPUT FORM -->
+                    <StackPanel x:Name="FixedForm" Visibility="Collapsed" Margin="0,0,0,10">
+                        <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
+                            <TextBlock Text="Category:" Width="80" VerticalAlignment="Center"/>
+                            <TextBox x:Name="FixedCategoryInput" Width="200"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                            <TextBlock Text="Amount (CHF):" Width="80" VerticalAlignment="Center"/>
+                            <TextBox x:Name="FixedAmountInput" Width="200"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                            <Button Content="Save" Click="SaveFixed_Click" Background="#DAA520" Foreground="White" Width="100" Margin="0,0,10,0" />
+                            <Button Content="Cancel" Click="CancelFixedForm_Click" Background="LightGray" Width="100" />
+                        </StackPanel>
+                    </StackPanel>
+
+                    <DataGrid x:Name="dgFixedExpenses" AutoGenerateColumns="False" CanUserAddRows="False" Margin="0,0,0,20"
+                              ItemsSource="{Binding FixedExpenses}">
                         <DataGrid.Columns>
-                            <DataGridTextColumn Header="Kategorie" Binding="{Binding Category}" Width="*" />
-                            <DataGridTextColumn Header="Betrag (CHF)" Binding="{Binding Amount}" Width="*" />
-                            <DataGridTemplateColumn Header="Aktion" Width="Auto">
+                            <DataGridTextColumn Header="Category" Binding="{Binding Category}" Width="*" />
+                            <DataGridTextColumn Header="Amount (CHF)" Binding="{Binding Amount}" Width="*" />
+                            <DataGridTemplateColumn Header="Action" Width="Auto">
                                 <DataGridTemplateColumn.CellTemplate>
                                     <DataTemplate>
-                                        <Button Content="Löschen" Click="DeleteFixedExpense_Click" Tag="{Binding Id}" />
+                                        <Button Content="Delete" Click="DeleteFixedExpense_Click" Tag="{Binding Id}"
+                                                Background="Tomato" Foreground="White" BorderThickness="0" Padding="4,2" Cursor="Hand" />
                                     </DataTemplate>
                                 </DataGridTemplateColumn.CellTemplate>
                             </DataGridTemplateColumn>
                         </DataGrid.Columns>
                     </DataGrid>
 
-                    <!-- Sonstige Ausgaben -->
-                    <TextBlock Text="Sonstige Ausgaben" FontSize="18" FontWeight="SemiBold" Margin="0,20,0,5" />
-                    <DataGrid x:Name="dgOtherExpenses" AutoGenerateColumns="False" CanUserAddRows="False" ItemsSource="{Binding OtherExpenses}">
+
+                    <!-- OTHER EXPENSES -->
+                    <TextBlock Text="Other Expenses" FontSize="18" FontWeight="SemiBold" Margin="0,20,0,5" />
+                    <Button Content="+ Add Other Expense" Click="ToggleOtherForm_Click"
+                            Width="190" Height="35" Background="#DAA520" Foreground="White"
+                            FontWeight="Bold" BorderThickness="0" HorizontalAlignment="Left" Margin="0,0,0,10" Cursor="Hand" />
+
+                    <!-- OTHER INPUT FORM -->
+                    <StackPanel x:Name="OtherForm" Visibility="Collapsed" Margin="0,0,0,10">
+                        <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
+                            <TextBlock Text="Category:" Width="80" VerticalAlignment="Center"/>
+                            <TextBox x:Name="OtherCategoryInput" Width="200"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+                            <TextBlock Text="Amount (CHF):" Width="80" VerticalAlignment="Center"/>
+                            <TextBox x:Name="OtherAmountInput" Width="200"/>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                            <Button Content="Save" Click="SaveOther_Click" Background="#DAA520" Foreground="White" Width="100" Margin="0,0,10,0" />
+                            <Button Content="Cancel" Click="CancelOtherForm_Click" Background="LightGray" Width="100" />
+                        </StackPanel>
+                    </StackPanel>
+
+                    <DataGrid x:Name="dgOtherExpenses" AutoGenerateColumns="False" CanUserAddRows="False"
+                              ItemsSource="{Binding OtherExpenses}">
                         <DataGrid.Columns>
-                            <DataGridTextColumn Header="Kategorie" Binding="{Binding Category}" Width="*" />
-                            <DataGridTextColumn Header="Betrag (CHF)" Binding="{Binding Amount}" Width="*" />
-                            <DataGridTemplateColumn Header="Aktion" Width="Auto">
+                            <DataGridTextColumn Header="Category" Binding="{Binding Category}" Width="*" />
+                            <DataGridTextColumn Header="Amount (CHF)" Binding="{Binding Amount}" Width="*" />
+                            <DataGridTemplateColumn Header="Action" Width="Auto">
                                 <DataGridTemplateColumn.CellTemplate>
                                     <DataTemplate>
-                                        <Button Content="Löschen" Click="DeleteOtherExpense_Click" Tag="{Binding Id}" />
+                                        <Button Content="Delete" Click="DeleteOtherExpense_Click" Tag="{Binding Id}"
+                                                Background="Tomato" Foreground="White" BorderThickness="0" Padding="4,2" Cursor="Hand" />
                                     </DataTemplate>
                                 </DataGridTemplateColumn.CellTemplate>
                             </DataGridTemplateColumn>
