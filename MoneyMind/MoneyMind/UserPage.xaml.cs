@@ -17,9 +17,6 @@ using static MoneyMind.Login;
 
 namespace MoneyMind
 {
-  /// <summary>
-  /// Interaktionslogik für UserPage.xaml
-  /// </summary>
   public partial class UserPage : Page
   {
     public UserPage()
