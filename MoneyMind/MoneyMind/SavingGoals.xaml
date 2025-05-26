@@ -8,13 +8,18 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="SavingGoals">
 
-  <Grid Background="White">
-    <TextBlock Text="Saving Goals"
-           HorizontalAlignment="Center"
-           VerticalAlignment="Center"
-           FontSize="28"
-           Foreground="#DAA520"
-           FontWeight="Bold"/>
+  <Grid Background="#FFFFFF">
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+      <StackPanel x:Name="goalsPanel" Margin="20">
+        <TextBlock Text="Sparziele"
+                   FontSize="28"
+                   FontWeight="Bold"
+                   Foreground="#DAA520"
+                   Margin="0 0 0 20"
+                   HorizontalAlignment="Center"/>
 
+        <!-- Dynamische Inhalte (Ziele) werden hier eingefügt -->
+      </StackPanel>
+    </ScrollViewer>
   </Grid>
 </Page>
