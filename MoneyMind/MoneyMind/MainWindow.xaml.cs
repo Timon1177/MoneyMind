@@ -28,7 +28,7 @@ namespace MoneyMind
 
     private void NavigateUser_Click(object sender, RoutedEventArgs e)
     {
-      //MainFrame.Navigate(new UserPage());
+      MainFrame.Navigate(new UserPage());
     }
 
     private void ExitApp_Click(object sender, RoutedEventArgs e)
