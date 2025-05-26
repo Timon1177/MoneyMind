@@ -23,6 +23,20 @@ namespace MoneyMind
         public SavingGoals()
         {
             InitializeComponent();
+            LoadSavingGoals();
+        }
+
+        private class SavingGoalsInfo
+        {
+          public string GoalName { get; set; }
+          public decimal TargetAmount { get; set; }
+          public decimal CurrentAmount { get; set; }
+          public DateTime Deadline { get; set; }
+        }
+
+        private void LoadSavingGoals()
+        {
+          
         }
     }
 }
