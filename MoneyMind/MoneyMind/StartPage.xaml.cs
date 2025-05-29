@@ -21,7 +21,7 @@ namespace MoneyMind
       }
       else
       {
-        SaldoText.Foreground = new SolidColorBrush(Color.FromRgb(0x34, 0xA8, 0x5F)); // schönes Grün
+        SaldoText.Foreground = new SolidColorBrush(Colors.Black);
       }
     }
 

@@ -41,7 +41,7 @@
                           ItemsSource="{Binding Incomes}" ColumnHeaderHeight="30" RowHeight="30">
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="Category" Binding="{Binding Category}" Width="*" />
-                        <DataGridTextColumn Header="Amount (CHF)" Binding="{Binding Amount}" Width="*" />
+                        <DataGridTextColumn Header="Amount (CHF)" Binding="{Binding AmountFormatted}" Width="*" />
                         <DataGridTemplateColumn Header="Action" Width="Auto">
                             <DataGridTemplateColumn.CellTemplate>
                                 <DataTemplate>
@@ -81,7 +81,7 @@
                           ItemsSource="{Binding FixedExpenses}">
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="Category" Binding="{Binding Category}" Width="*" />
-                        <DataGridTextColumn Header="Amount (CHF)" Binding="{Binding Amount}" Width="*" />
+                        <DataGridTextColumn Header="Amount (CHF)" Binding="{Binding AmountFormatted}" Width="*" />
                         <DataGridTemplateColumn Header="Action" Width="Auto">
                             <DataGridTemplateColumn.CellTemplate>
                                 <DataTemplate>
@@ -117,7 +117,7 @@
                           ItemsSource="{Binding OtherExpenses}">
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="Category" Binding="{Binding Category}" Width="*" />
-                        <DataGridTextColumn Header="Amount (CHF)" Binding="{Binding Amount}" Width="*" />
+                        <DataGridTextColumn Header="Amount (CHF)" Binding="{Binding AmountFormatted}" Width="*" />
                         <DataGridTemplateColumn Header="Action" Width="Auto">
                             <DataGridTemplateColumn.CellTemplate>
                                 <DataTemplate>
