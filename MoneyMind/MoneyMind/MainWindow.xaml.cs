@@ -26,6 +26,11 @@ namespace MoneyMind
       MainFrame.Navigate(new SavingGoals());
     }
 
+    private void NavigateStocks_Click(object sender, RoutedEventArgs e)
+    {
+      MainFrame.Navigate(new StockPage());
+    }
+
     private void NavigateUser_Click(object sender, RoutedEventArgs e)
     {
       MainFrame.Navigate(new UserPage());
