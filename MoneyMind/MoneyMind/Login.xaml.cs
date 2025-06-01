@@ -17,7 +17,6 @@ namespace MoneyMind
       public static int UserID { get; set; }
     }
 
-
     private void InitializeDatabase()
     {
       var connection = Database.Connection;
@@ -40,7 +39,6 @@ namespace MoneyMind
         FOREIGN KEY (fk_userID) REFERENCES users(id)
     );";
 
-
       using (var command = new SQLiteCommand(createUsersTable, connection))
       {
         command.ExecuteNonQuery();
@@ -51,7 +49,6 @@ namespace MoneyMind
         command.ExecuteNonQuery();
       }
     }
-
 
     private void BtnRegister_Click(object sender, RoutedEventArgs e)
     {
@@ -67,37 +64,26 @@ namespace MoneyMind
 
       var connection = Database.Connection;
 
-      string query = "SELECT COUNT(*) FROM users WHERE username = @username AND password = @password";
+      string query = "SELECT id FROM users WHERE username = @username AND password = @password";
       using (var command = new SQLiteCommand(query, connection))
       {
         command.Parameters.AddWithValue("@username", username);
         command.Parameters.AddWithValue("@password", password);
-        int count = Convert.ToInt32(command.ExecuteScalar());
 
-        if (count > 0)
+        object result = command.ExecuteScalar();
+
+        if (result != null && int.TryParse(result.ToString(), out int userId))
         {
-          string getIdQuery = "SELECT id FROM users WHERE username = @username AND password = @password ";
-          using (var idCommand = new SQLiteCommand(getIdQuery, connection))
-          {
-            idCommand.Parameters.AddWithValue("@username", username);
-            idCommand.Parameters.AddWithValue("@password", password);
-            object result = idCommand.ExecuteScalar();
-            if (result != null && int.TryParse(result.ToString(), out int userId))
-            {
-              CurrentUser.UserID = userId;
-              MessageBox.Show("Login erfolgreich!");
-              MainWindow main = new MainWindow();
-              main.Show();
-              this.Close();
-            }
-
-            else
-            {
-              MessageBox.Show("Falsche Anmeldedaten!");
-            }
-          }
+          CurrentUser.UserID = userId;
+          MessageBox.Show("Login successful!");
+          MainWindow main = new MainWindow();
+          main.Show();
+          this.Close();
         }
-        
+        else
+        {
+          MessageBox.Show("Incorrect username or password.", "Login failed", MessageBoxButton.OK, MessageBoxImage.Warning);
+        }
       }
     }
 
@@ -107,13 +93,13 @@ namespace MoneyMind
       {
         this.WindowStyle = WindowStyle.SingleBorderWindow;
         this.WindowState = WindowState.Normal;
-        FullscreenToggleButton.Content = "🗗";
+        FullscreenToggleButton.Content = "🗇";
       }
       else
       {
         this.WindowStyle = WindowStyle.None;
         this.WindowState = WindowState.Maximized;
-        FullscreenToggleButton.Content = "⤢";
+        FullscreenToggleButton.Content = "⬢";
       }
     }
   }

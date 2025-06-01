@@ -73,12 +73,10 @@ namespace MoneyMind
 
         private void UpdateSums()
         {
-            txtTotalIncome.Text = $"Total income: {Incomes.Sum(i => i.Amount):0.00} CHF";
+            txtTotalIncome.Text = $"Total income: {Incomes.Sum(i => i.Amount):N2} CHF";
             double totalExpenses = FixedExpenses.Sum(e => e.Amount) + OtherExpenses.Sum(e => e.Amount);
-            txtTotalExpense.Text = $"Total expenses: {totalExpenses:0.00} CHF";
+            txtTotalExpense.Text = $"Total expenses: {totalExpenses:N2} CHF";
         }
-
-        // ===== TOGGLE FORM VISIBILITY =====
 
         private void ToggleIncomeForm_Click(object sender, RoutedEventArgs e)
         {
@@ -116,16 +114,16 @@ namespace MoneyMind
             OtherForm.Visibility = Visibility.Collapsed;
         }
 
-        // ===== SAVE BUTTONS =====
-
         private void SaveIncome_Click(object sender, RoutedEventArgs e)
         {
             string category = IncomeCategoryInput.Text.Trim();
-            if (!double.TryParse(IncomeAmountInput.Text.Replace(',', '.'), NumberStyles.Any, CultureInfo.InvariantCulture, out double amount) || amount <= 0 || string.IsNullOrWhiteSpace(category))
+            if (!double.TryParse(IncomeAmountInput.Text, NumberStyles.Any, CultureInfo.CurrentCulture, out double amount) || amount <= 0 || string.IsNullOrWhiteSpace(category))
             {
                 MessageBox.Show("Please enter a valid category and amount.");
                 return;
             }
+
+            amount = Math.Round(amount, 2);
 
             var connection = Database.Connection;
             string insert = "INSERT INTO Income (Category, Amount, fk_userID) VALUES (@cat, @amt, @userID)";
@@ -142,11 +140,13 @@ namespace MoneyMind
         private void SaveFixed_Click(object sender, RoutedEventArgs e)
         {
             string category = FixedCategoryInput.Text.Trim();
-            if (!double.TryParse(FixedAmountInput.Text.Replace(',', '.'), NumberStyles.Any, CultureInfo.InvariantCulture, out double amount) || amount <= 0 || string.IsNullOrWhiteSpace(category))
+            if (!double.TryParse(FixedAmountInput.Text, NumberStyles.Any, CultureInfo.CurrentCulture, out double amount) || amount <= 0 || string.IsNullOrWhiteSpace(category))
             {
                 MessageBox.Show("Please enter a valid category and amount.");
                 return;
             }
+
+            amount = Math.Round(amount, 2);
 
             var connection = Database.Connection;
             string insert = "INSERT INTO Expenses (Category, Amount, Type, fk_userID) VALUES (@cat, @amt, 'Fixed', @userID)";
@@ -163,11 +163,13 @@ namespace MoneyMind
         private void SaveOther_Click(object sender, RoutedEventArgs e)
         {
             string category = OtherCategoryInput.Text.Trim();
-            if (!double.TryParse(OtherAmountInput.Text.Replace(',', '.'), NumberStyles.Any, CultureInfo.InvariantCulture, out double amount) || amount <= 0 || string.IsNullOrWhiteSpace(category))
+            if (!double.TryParse(OtherAmountInput.Text, NumberStyles.Any, CultureInfo.CurrentCulture, out double amount) || amount <= 0 || string.IsNullOrWhiteSpace(category))
             {
                 MessageBox.Show("Please enter a valid category and amount.");
                 return;
             }
+
+            amount = Math.Round(amount, 2);
 
             var connection = Database.Connection;
             string insert = "INSERT INTO Expenses (Category, Amount, Type, fk_userID) VALUES (@cat, @amt, 'Other', @userID)";
@@ -230,6 +232,7 @@ namespace MoneyMind
         public int Id { get; set; }
         public string Category { get; set; }
         public double Amount { get; set; }
+        public string AmountFormatted => Amount.ToString("N2");
         public string Type { get; set; } // Nur Expense
     }
 }

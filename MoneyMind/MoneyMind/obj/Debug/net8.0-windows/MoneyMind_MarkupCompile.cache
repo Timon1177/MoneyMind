@@ -4,12 +4,16 @@
 winexe
 C#
 .cs
-C:\Users\timon\OneDrive - sluz\IMS Sursee_Luzern 2023-24\BBZW Sursee\Semester 4\IPT6.1\IPT6.1\MoneyMind\MoneyMind\obj\Debug\net8.0-windows\
+C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\obj\Debug\net8.0-windows\
 MoneyMind
 none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
+<<<<<<< HEAD
 C:\Users\timon\OneDrive - sluz\IMS Sursee_Luzern 2023-24\BBZW Sursee\Semester 4\IPT6.1\IPT6.1\MoneyMind\MoneyMind\App.xaml
+=======
+C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\App.xaml
+>>>>>>> a10d0d89076906feadf9477322bb06a276bf0a70
 7882778463
 
 11-1697422303
