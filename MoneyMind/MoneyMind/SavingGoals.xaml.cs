@@ -4,7 +4,9 @@ using System.Data.SQLite;
 using System.Windows.Controls;
 using static MoneyMind.Login;
 using System.Windows.Media;
-using System.Windows; 
+using System.Windows;
+using System.Globalization;
+using System.Data.SqlTypes;
 
 
 namespace MoneyMind
@@ -14,6 +16,41 @@ namespace MoneyMind
     public SavingGoals()
     {
       InitializeComponent();
+      LoadSavingGoals();
+    }
+
+    private void ToggleSavingGoalForm_Click(object sender, RoutedEventArgs e)
+    {
+      SavingGoalForm.Visibility = SavingGoalForm.Visibility == Visibility.Visible ? Visibility.Collapsed : Visibility.Visible;
+    }
+
+    private void CancelSavingGoalForm_Click(object sender, RoutedEventArgs e)
+    {
+      SavingGoalNameInput.Text = "";
+      SavingGoalAmountInput.Text = "";
+      SavingGoalForm.Visibility = Visibility.Collapsed;
+    }
+
+    private void SaveSavingGoal_Click(object sender, RoutedEventArgs e)
+    {
+      string Name = SavingGoalNameInput.Text.Trim();
+      string deadline = SavingGoalDeadlineInput.Text.Trim();
+      if (!double.TryParse(SavingGoalAmountInput.Text.Replace(',', '.'), NumberStyles.Any, CultureInfo.InvariantCulture, out double amount) || amount <= 0 || string.IsNullOrWhiteSpace(Name) || string.IsNullOrEmpty(deadline))
+      {
+        MessageBox.Show("Please enter a valid category and amount.");
+        return;
+      }
+
+      var connection = Database.Connection;
+      string insert = "INSERT INTO SavingGoals (GoalName, TargetAmount, DeadLine, fk_userID) VALUES (@name, @Tamt, @deadline, @userID)";
+      using var cmd = new SQLiteCommand(insert, connection);
+      cmd.Parameters.AddWithValue("@name", Name);
+      cmd.Parameters.AddWithValue("@Tamt", amount);
+      cmd.Parameters.AddWithValue("@deadline", deadline);
+      cmd.Parameters.AddWithValue("@userID", CurrentUser.UserID);
+      cmd.ExecuteNonQuery();
+
+      CancelSavingGoalForm_Click(null, null);
       LoadSavingGoals();
     }
 
@@ -104,6 +141,15 @@ namespace MoneyMind
       }
 
       return result;
+    }
+
+    public class Entry
+    {
+      public int Id { get; set; }
+      public string Name { get; set; }
+      public double Amount { get; set; }
+
+      public string deadline { get; set; }
     }
   }
 }

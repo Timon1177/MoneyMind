@@ -9,17 +9,51 @@
       Title="SavingGoals">
 
   <Grid Background="#FFFFFF">
-    <ScrollViewer VerticalScrollBarVisibility="Auto">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto"/>
+      <!-- für Button und Formular -->
+      <RowDefinition Height="*"/>
+      <!-- für ScrollViewer -->
+    </Grid.RowDefinitions>
+
+    <!-- Button und Formular -->
+    <StackPanel Grid.Row="0" Margin="20">
+      <Button Content="+ Add Saving Goal" Click="ToggleSavingGoalForm_Click"
+            Width="160" Height="40" Background="#DAA520" Foreground="White"
+            FontWeight="Bold" BorderThickness="0" HorizontalAlignment="Left" Margin="0,0,0,10" Cursor="Hand" />
+
+      <!-- SavingGoal INPUT FORM -->
+      <StackPanel x:Name="SavingGoalForm" Visibility="Collapsed" Margin="0,0,0,10">
+        <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
+          <TextBlock Text="Name:" Width="80" VerticalAlignment="Center"/>
+          <TextBox x:Name="SavingGoalNameInput" Width="200"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+          <TextBlock Text="Amount (CHF):" Width="80" VerticalAlignment="Center"/>
+          <TextBox x:Name="SavingGoalAmountInput" Width="200"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+          <TextBlock Text="Deadline (yyyy-mm-dd):" Width="80" VerticalAlignment="Center"/>
+          <TextBox x:Name="SavingGoalDeadlineInput" Width="200"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+          <Button Content="Save" Click="SaveSavingGoal_Click" Background="#DAA520" Foreground="White" Width="100" Margin="0,0,10,0" />
+          <Button Content="Cancel" Click="CancelSavingGoalForm_Click" Background="LightGray" Width="100" />
+        </StackPanel>
+      </StackPanel>
+    </StackPanel>
+
+    <!-- Ziele-Übersicht -->
+    <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
       <StackPanel x:Name="goalsPanel" Margin="20">
         <TextBlock Text="Sparziele"
-                   FontSize="28"
-                   FontWeight="Bold"
-                   Foreground="#DAA520"
-                   Margin="0 0 0 20"
-                   HorizontalAlignment="Center"/>
-
-        <!-- Dynamische Inhalte (Ziele) werden hier eingefügt -->
+                 FontSize="28"
+                 FontWeight="Bold"
+                 Foreground="#DAA520"
+                 Margin="0 0 0 20"
+                 HorizontalAlignment="Center"/>
       </StackPanel>
     </ScrollViewer>
   </Grid>
+
 </Page>
