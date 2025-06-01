@@ -11,29 +11,35 @@
   <Grid Background="#FFFFFF">
     <Grid.RowDefinitions>
       <RowDefinition Height="Auto"/>
-      <!-- für Button und Formular -->
+      <RowDefinition Height="Auto"/>
       <RowDefinition Height="*"/>
-      <!-- für ScrollViewer -->
     </Grid.RowDefinitions>
 
-    <!-- Button und Formular -->
-    <StackPanel Grid.Row="0" Margin="20">
-      <Button Content="+ Add Saving Goal" Click="ToggleSavingGoalForm_Click"
-            Width="160" Height="40" Background="#DAA520" Foreground="White"
-            FontWeight="Bold" BorderThickness="0" HorizontalAlignment="Left" Margin="0,0,0,10" Cursor="Hand" />
+    <!-- Titel ganz oben -->
+    <TextBlock Text="Saving Goals"
+               Grid.Row="0"
+               FontSize="32"
+               FontWeight="Bold"
+               Foreground="#DAA520"
+               Margin="20 20 20 10"
+               HorizontalAlignment="Center"/>
 
-      <!-- SavingGoal INPUT FORM -->
+    <StackPanel Grid.Row="1" Margin="20">
+      <Button Content="+ Add Saving Goal" Click="ToggleSavingGoalForm_Click"
+              Width="160" Height="40" Background="#DAA520" Foreground="White"
+              FontWeight="Bold" BorderThickness="0" HorizontalAlignment="Left" Margin="0,0,0,10" Cursor="Hand" />
+
       <StackPanel x:Name="SavingGoalForm" Visibility="Collapsed" Margin="0,0,0,10">
         <StackPanel Orientation="Horizontal" Margin="0,0,0,5">
-          <TextBlock Text="Name:" Width="80" VerticalAlignment="Center"/>
+          <TextBlock Text="Name:" Width="120" VerticalAlignment="Center"/>
           <TextBox x:Name="SavingGoalNameInput" Width="200"/>
         </StackPanel>
         <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
-          <TextBlock Text="Amount (CHF):" Width="80" VerticalAlignment="Center"/>
+          <TextBlock Text="Amount (CHF):" Width="120" VerticalAlignment="Center"/>
           <TextBox x:Name="SavingGoalAmountInput" Width="200"/>
         </StackPanel>
         <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
-          <TextBlock Text="Deadline (yyyy-mm-dd):" Width="80" VerticalAlignment="Center"/>
+          <TextBlock Text="Deadline (yyyy-mm-dd): " Width="120" VerticalAlignment="Center"/>
           <TextBox x:Name="SavingGoalDeadlineInput" Width="200"/>
         </StackPanel>
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
@@ -43,15 +49,10 @@
       </StackPanel>
     </StackPanel>
 
-    <!-- Ziele-Übersicht -->
-    <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
+
+    <ScrollViewer Grid.Row="2" VerticalScrollBarVisibility="Auto">
       <StackPanel x:Name="goalsPanel" Margin="20">
-        <TextBlock Text="Sparziele"
-                 FontSize="28"
-                 FontWeight="Bold"
-                 Foreground="#DAA520"
-                 Margin="0 0 0 20"
-                 HorizontalAlignment="Center"/>
+
       </StackPanel>
     </ScrollViewer>
   </Grid>

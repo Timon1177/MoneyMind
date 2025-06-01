@@ -1,19 +1,24 @@
-﻿using System;
+﻿using MoneyMind;
+using System;
 using System.Collections.ObjectModel;
 using System.Data.SQLite;
 using System.Globalization;
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
+using System.Xml.Serialization;
 using static MoneyMind.Login;
+
 
 namespace MoneyMind
 {
     public partial class IncomePage : Page
     {
+
         public ObservableCollection<Entry> Incomes { get; set; } = new();
         public ObservableCollection<Entry> FixedExpenses { get; set; } = new();
         public ObservableCollection<Entry> OtherExpenses { get; set; } = new();
+
 
         public IncomePage()
         {
@@ -67,6 +72,7 @@ namespace MoneyMind
                         OtherExpenses.Add(entry);
                 }
             }
+            decimal balance = StartPage.GetCurrentBalance();
 
             UpdateSums();
         }

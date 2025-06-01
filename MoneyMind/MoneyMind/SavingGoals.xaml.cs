@@ -6,8 +6,6 @@ using static MoneyMind.Login;
 using System.Windows.Media;
 using System.Windows;
 using System.Globalization;
-using System.Data.SqlTypes;
-
 
 namespace MoneyMind
 {
@@ -28,23 +26,26 @@ namespace MoneyMind
     {
       SavingGoalNameInput.Text = "";
       SavingGoalAmountInput.Text = "";
+      SavingGoalDeadlineInput.Text = "";
       SavingGoalForm.Visibility = Visibility.Collapsed;
     }
 
     private void SaveSavingGoal_Click(object sender, RoutedEventArgs e)
     {
-      string Name = SavingGoalNameInput.Text.Trim();
+      string name = SavingGoalNameInput.Text.Trim();
       string deadline = SavingGoalDeadlineInput.Text.Trim();
-      if (!double.TryParse(SavingGoalAmountInput.Text.Replace(',', '.'), NumberStyles.Any, CultureInfo.InvariantCulture, out double amount) || amount <= 0 || string.IsNullOrWhiteSpace(Name) || string.IsNullOrEmpty(deadline))
+
+      if (!double.TryParse(SavingGoalAmountInput.Text.Replace(',', '.'), NumberStyles.Any, CultureInfo.InvariantCulture, out double amount)
+          || amount <= 0 || string.IsNullOrWhiteSpace(name) || string.IsNullOrEmpty(deadline))
       {
-        MessageBox.Show("Please enter a valid category and amount.");
+        MessageBox.Show("Please enter a valid name, amount, and deadline.");
         return;
       }
 
       var connection = Database.Connection;
       string insert = "INSERT INTO SavingGoals (GoalName, TargetAmount, DeadLine, fk_userID) VALUES (@name, @Tamt, @deadline, @userID)";
       using var cmd = new SQLiteCommand(insert, connection);
-      cmd.Parameters.AddWithValue("@name", Name);
+      cmd.Parameters.AddWithValue("@name", name);
       cmd.Parameters.AddWithValue("@Tamt", amount);
       cmd.Parameters.AddWithValue("@deadline", deadline);
       cmd.Parameters.AddWithValue("@userID", CurrentUser.UserID);
@@ -56,14 +57,15 @@ namespace MoneyMind
 
     public class SavingGoalsInfo
     {
+      public int GoalID { get; set; } // korrekt nach DB
       public string GoalName { get; set; }
       public decimal TargetAmount { get; set; }
-      public decimal CurrentAmount { get; set; }
       public DateTime Deadline { get; set; }
     }
 
     private void LoadSavingGoals()
     {
+      goalsPanel.Children.Clear();
       List<SavingGoalsInfo> goals = GetSavingGoals();
 
       if (goals.Count == 0)
@@ -72,10 +74,25 @@ namespace MoneyMind
         {
           Text = "Keine Sparziele gefunden.",
           FontSize = 18,
-          Foreground = System.Windows.Media.Brushes.Gray
+          Foreground = Brushes.Gray
         });
         return;
       }
+
+      decimal amount = 0;
+      var connection = Database.Connection;
+
+      string query = "SELECT amount FROM Balance WHERE fk_userID = @userID";
+      using (var cmd = new SQLiteCommand(query, connection))
+      {
+        cmd.Parameters.AddWithValue("@userID", CurrentUser.UserID);
+        object result = cmd.ExecuteScalar();
+        if (result != null && decimal.TryParse(result.ToString(), out var value))
+        {
+          amount = value;
+        }
+      }
+
 
       foreach (var goal in goals)
       {
@@ -83,17 +100,17 @@ namespace MoneyMind
         {
           Background = Brushes.White,
           BorderBrush = Brushes.Goldenrod,
-          BorderThickness = new System.Windows.Thickness(1),
+          BorderThickness = new Thickness(1),
           CornerRadius = new CornerRadius(10),
-          Margin = new System.Windows.Thickness(0, 10, 0, 0),
-          Padding = new System.Windows.Thickness(10)
+          Margin = new Thickness(0, 10, 0, 0),
+          Padding = new Thickness(10)
         };
 
         var stack = new StackPanel();
 
         stack.Children.Add(new TextBlock
         {
-          Text = $"🎯 Ziel: {goal.GoalName}",
+          Text = $"🎯 Goal: {goal.GoalName}",
           FontSize = 16,
           FontWeight = FontWeights.Bold,
           Foreground = Brushes.DarkSlateGray
@@ -101,7 +118,7 @@ namespace MoneyMind
 
         stack.Children.Add(new TextBlock
         {
-          Text = $"💰 Zielbetrag: {goal.TargetAmount:C}",
+          Text = $"💰 Target Amount: {goal.TargetAmount:C}",
           FontSize = 14
         });
 
@@ -111,6 +128,31 @@ namespace MoneyMind
           FontSize = 14
         });
 
+        stack.Children.Add(new TextBlock
+        {
+          Text = $"✅ Goal reached: {(amount/goal.TargetAmount*100):N2} %",
+          FontSize = 14,
+        });
+
+        stack.Children.Add(new TextBlock
+        {
+          Text = $"⏳ Remaining Days: {(goal.Deadline - DateTime.Now).Days} days",
+          FontSize = 14,
+          Foreground = (goal.Deadline < DateTime.Now) ? Brushes.Red : Brushes.Green
+        });
+
+        var deleteButton = new Button
+        {
+          Content = "🗑️ Delete",
+          Background = Brushes.IndianRed,
+          Foreground = Brushes.White,
+          Margin = new Thickness(0, 10, 0, 0),
+          Width = 100,
+          Tag = goal.GoalID
+        };
+        deleteButton.Click += DeleteSavingGoal_Click;
+
+        stack.Children.Add(deleteButton);
         border.Child = stack;
         goalsPanel.Children.Add(border);
       }
@@ -120,7 +162,7 @@ namespace MoneyMind
     {
       var result = new List<SavingGoalsInfo>();
       var connection = Database.Connection;
-      string query = "SELECT GoalName, TargetAmount, DeadLine FROM SavingGoals WHERE fk_userId = @userID";
+      string query = "SELECT GoalID, GoalName, TargetAmount, DeadLine FROM SavingGoals WHERE fk_userID = @userID";
 
       using (var command = new SQLiteCommand(query, connection))
       {
@@ -132,9 +174,10 @@ namespace MoneyMind
           {
             result.Add(new SavingGoalsInfo
             {
-              GoalName = reader.GetString(0),
-              TargetAmount = reader.GetDecimal(1),
-              Deadline = reader.GetDateTime(2)
+              GoalID = reader.GetInt32(0),
+              GoalName = reader.GetString(1),
+              TargetAmount = reader.GetDecimal(2),
+              Deadline = reader.GetDateTime(3)
             });
           }
         }
@@ -143,13 +186,19 @@ namespace MoneyMind
       return result;
     }
 
-    public class Entry
+    private void DeleteSavingGoal_Click(object sender, RoutedEventArgs e)
     {
-      public int Id { get; set; }
-      public string Name { get; set; }
-      public double Amount { get; set; }
+      if (sender is Button btn && btn.Tag is int goalID)
+      {
+        var connection = Database.Connection;
+        string delete = "DELETE FROM SavingGoals WHERE GoalID = @id AND fk_userID = @userID";
+        using var cmd = new SQLiteCommand(delete, connection);
+        cmd.Parameters.AddWithValue("@id", goalID);
+        cmd.Parameters.AddWithValue("@userID", CurrentUser.UserID);
+        cmd.ExecuteNonQuery();
 
-      public string deadline { get; set; }
+        LoadSavingGoals();
+      }
     }
   }
 }
