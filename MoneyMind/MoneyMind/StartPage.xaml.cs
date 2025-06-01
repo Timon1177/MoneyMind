@@ -2,6 +2,7 @@
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
+using System.Xml.Linq;
 using static MoneyMind.Login;
 
 namespace MoneyMind
@@ -25,7 +26,7 @@ namespace MoneyMind
       }
     }
 
-    private decimal GetCurrentBalance()
+    public static decimal GetCurrentBalance()
     {
       var connection = Database.Connection;
 
@@ -50,7 +51,15 @@ namespace MoneyMind
           expenses = value;
       }
 
+      string insert = "UPDATE Balance SET amount = @amount WHERE fk_userID = @userID";
+      using var Updatecmd = new SQLiteCommand(insert, connection);
+      Updatecmd.Parameters.AddWithValue("@amount", income-expenses);
+      Updatecmd.Parameters.AddWithValue("@userID", CurrentUser.UserID);
+      Updatecmd.ExecuteNonQuery();
+
       return income - expenses;
+
+
     }
   }
 }
