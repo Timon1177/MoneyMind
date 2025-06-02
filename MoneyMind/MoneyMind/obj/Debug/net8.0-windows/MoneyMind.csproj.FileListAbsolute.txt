@@ -137,6 +137,7 @@ C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\obj\Debug\net8.0-w
 C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\Newtonsoft.Json.dll
 C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\obj\Debug\net8.0-windows\StockPage.baml
 C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\obj\Debug\net8.0-windows\StockPage.g.cs
+<<<<<<< HEAD
 C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\config.json
 C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\obj\Debug\net8.0-windows\MoneyMind_Content.g.cs
 C:\Users\timon\OneDrive - sluz\IMS Sursee_Luzern 2023-24\BBZW Sursee\Semester 4\IPT6.1\IPT6.1\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\config.json
@@ -144,3 +145,23 @@ C:\Users\timon\OneDrive - sluz\IMS Sursee_Luzern 2023-24\BBZW Sursee\Semester 4\
 C:\Users\timon\OneDrive - sluz\IMS Sursee_Luzern 2023-24\BBZW Sursee\Semester 4\IPT6.1\IPT6.1\MoneyMind\MoneyMind\obj\Debug\net8.0-windows\StockPage.baml
 C:\Users\timon\OneDrive - sluz\IMS Sursee_Luzern 2023-24\BBZW Sursee\Semester 4\IPT6.1\IPT6.1\MoneyMind\MoneyMind\obj\Debug\net8.0-windows\StockPage.g.cs
 C:\Users\timon\OneDrive - sluz\IMS Sursee_Luzern 2023-24\BBZW Sursee\Semester 4\IPT6.1\IPT6.1\MoneyMind\MoneyMind\obj\Debug\net8.0-windows\MoneyMind_Content.g.cs
+=======
+C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\HarfBuzzSharp.dll
+C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\LiveChartsCore.dll
+C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\LiveChartsCore.SkiaSharpView.dll
+C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\LiveChartsCore.SkiaSharpView.WPF.dll
+C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\OpenTK.dll
+C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\GLWpfControl.dll
+C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\SkiaSharp.dll
+C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\SkiaSharp.HarfBuzz.dll
+C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\SkiaSharp.Views.Desktop.Common.dll
+C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\SkiaSharp.Views.WPF.dll
+C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\runtimes\osx\native\libHarfBuzzSharp.dylib
+C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\runtimes\win-arm64\native\libHarfBuzzSharp.dll
+C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\runtimes\win-x64\native\libHarfBuzzSharp.dll
+C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\runtimes\win-x86\native\libHarfBuzzSharp.dll
+C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\runtimes\osx\native\libSkiaSharp.dylib
+C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\runtimes\win-arm64\native\libSkiaSharp.dll
+C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\runtimes\win-x64\native\libSkiaSharp.dll
+C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\runtimes\win-x86\native\libSkiaSharp.dll
+>>>>>>> 61ef19a4c945285d01fa056b639abea50cfbf822
