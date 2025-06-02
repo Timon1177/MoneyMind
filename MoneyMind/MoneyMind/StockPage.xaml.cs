@@ -18,30 +18,17 @@ namespace MoneyMind
         private readonly System.Timers.Timer _updateTimer;
         private readonly string _apiKey = "18669672a9f448b2b68d537a9a11286f";
 
-        private readonly List<decimal> _priceValues;
-        private readonly List<string> _labels;
-        private readonly LineSeries<decimal> _lineSeries;
+        private List<decimal> _priceValues;
+        private List<string> _labels;
 
-        private ISeries[] _series;
-        public ISeries[] Series
-        {
-            get => _series;
-            set { _series = value; OnPropertyChanged(nameof(Series)); }
-        }
+        private bool _isRunning = false;
+        private bool _isUpdating = false;
+        private string? _lastTimestamp;
+        private decimal? _lastPrice;
 
-        private Axis[] _xAxes;
-        public Axis[] XAxes
-        {
-            get => _xAxes;
-            set { _xAxes = value; OnPropertyChanged(nameof(XAxes)); }
-        }
-
-        private Axis[] _yAxes;
-        public Axis[] YAxes
-        {
-            get => _yAxes;
-            set { _yAxes = value; OnPropertyChanged(nameof(YAxes)); }
-        }
+        public ISeries[] Series { get; set; }
+        public Axis[] XAxes { get; set; }
+        public Axis[] YAxes { get; set; }
 
         public StockPage()
         {
@@ -51,13 +38,14 @@ namespace MoneyMind
             _priceValues = new List<decimal>();
             _labels = new List<string>();
 
-            _lineSeries = new LineSeries<decimal>
+            Series = new ISeries[]
             {
-                Values = _priceValues,
-                Fill = null
+                new LineSeries<decimal>
+                {
+                    Values = _priceValues,
+                    Fill = null
+                }
             };
-
-            Series = new ISeries[] { _lineSeries };
 
             XAxes = new Axis[]
             {
@@ -76,24 +64,25 @@ namespace MoneyMind
                 }
             };
 
-            _updateTimer = new System.Timers.Timer(15000); // alle 15 Sekunden
+            _updateTimer = new System.Timers.Timer(12000); // alle 12 Sekunden (max. 5/min)
             _updateTimer.Elapsed += async (s, e) => await Dispatcher.InvokeAsync(UpdateChart);
-
-            _ = LoadInitialData(); // sofort starten
         }
 
-        private async System.Threading.Tasks.Task LoadInitialData()
+        public async void StartChartUpdates()
         {
+            if (_isRunning) return;
+            _isRunning = true;
+
             await UpdateChart();
-
-            // "Loading..."-Text ausblenden (nur wenn vorhanden im XAML)
             LoadingText.Visibility = Visibility.Collapsed;
-
             _updateTimer.Start();
         }
 
-        private async System.Threading.Tasks.Task UpdateChart()
+        public async System.Threading.Tasks.Task UpdateChart()
         {
+            if (_isUpdating) return;
+            _isUpdating = true;
+
             try
             {
                 using var client = new HttpClient();
@@ -117,25 +106,72 @@ namespace MoneyMind
 
                 var entry = rawValues.First;
                 string closeStr = entry["close"]!.ToString();
-                string timeStr = entry["datetime"]!.ToString().Substring(11);
+                string timeStr = entry["datetime"]!.ToString();
 
                 if (decimal.TryParse(closeStr, NumberStyles.Any, CultureInfo.InvariantCulture, out decimal close))
                 {
-                    _priceValues.Add(close);
-                    _labels.Add(timeStr);
-
-                    if (_priceValues.Count > 30)
+                    if (_lastTimestamp == timeStr && _lastPrice == close)
                     {
-                        _priceValues.RemoveAt(0);
-                        _labels.RemoveAt(0);
+                        Console.WriteLine("No change – skipping update.");
+                        return;
                     }
 
-                    StockChart.InvalidateVisual();
+                    _lastTimestamp = timeStr;
+                    _lastPrice = close;
+
+                    string timeOnly = DateTime.Parse(timeStr).ToString("HH:mm:ss");
+
+                    var newPrices = new List<decimal>(_priceValues) { close };
+                    var newLabels = new List<string>(_labels) { timeOnly };
+
+                    if (newPrices.Count > 30)
+                    {
+                        newPrices.RemoveAt(0);
+                        newLabels.RemoveAt(0);
+                    }
+
+                    _priceValues = newPrices;
+                    _labels = newLabels;
+
+                    Series = new ISeries[]
+                    {
+                        new LineSeries<decimal>
+                        {
+                            Values = _priceValues,
+                            Fill = null
+                        }
+                    };
+
+                    XAxes = new Axis[]
+                    {
+                        new Axis
+                        {
+                            Labels = _labels,
+                            LabelsRotation = 45
+                        }
+                    };
+
+                    if (DateTime.TryParse(timeStr, out var serverTime))
+                    {
+                        if ((DateTime.UtcNow - serverTime.ToUniversalTime()) > TimeSpan.FromMinutes(10))
+                        {
+                            MarketStatusText.Text = "Market is closed – showing last known price.";
+                            MarketStatusText.Visibility = Visibility.Visible;
+                        }
+                        else
+                        {
+                            MarketStatusText.Visibility = Visibility.Collapsed;
+                        }
+                    }
                 }
             }
             catch (Exception ex)
             {
                 Console.WriteLine("Chart update failed: " + ex.Message);
+            }
+            finally
+            {
+                _isUpdating = false;
             }
         }
 

@@ -29,6 +29,15 @@
                            HorizontalAlignment="Center"
                            Margin="0 0 0 10" />
 
+                <TextBlock x:Name="MarketStatusText"
+                           Text="Market is closed – showing last known price."
+                           FontSize="14"
+                           FontStyle="Italic"
+                           Foreground="DarkRed"
+                           HorizontalAlignment="Center"
+                           Visibility="Collapsed"
+                           Margin="0 0 0 10" />
+
                 <lvc:CartesianChart x:Name="StockChart"
                                     Height="300"
                                     Series="{Binding Series}"

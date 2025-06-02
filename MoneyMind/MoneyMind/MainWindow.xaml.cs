@@ -5,15 +5,17 @@ namespace MoneyMind
 {
   public partial class MainWindow : Window
   {
+    private StockPage? _stockPageInstance;
+
     public MainWindow()
     {
       InitializeComponent();
-      MainFrame.Navigate(new StartPage()); // ← Hier StartPage statt HomePage
+      MainFrame.Navigate(new StartPage());
     }
 
     private void NavigateHome_Click(object sender, RoutedEventArgs e)
     {
-      MainFrame.Navigate(new StartPage()); // ← Hier auch
+      MainFrame.Navigate(new StartPage());
     }
 
     private void NavigateIncome_Click(object sender, RoutedEventArgs e)
@@ -28,7 +30,13 @@ namespace MoneyMind
 
     private void NavigateStocks_Click(object sender, RoutedEventArgs e)
     {
-      MainFrame.Navigate(new StockPage());
+      if (_stockPageInstance == null)
+      {
+        _stockPageInstance = new StockPage();
+        _stockPageInstance.StartChartUpdates();
+      }
+
+      MainFrame.Navigate(_stockPageInstance);
     }
 
     private void NavigateUser_Click(object sender, RoutedEventArgs e)
