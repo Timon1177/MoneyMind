@@ -6,27 +6,34 @@
 
     <Grid Background="White">
         <Border Background="White"
-            BorderBrush="#DAA520"
-            BorderThickness="3"
-            CornerRadius="20"
-            Padding="20"
-            MinWidth="400"
-            MaxWidth="1000"
-            HorizontalAlignment="Center"
-            VerticalAlignment="Center">
+                BorderBrush="#DAA520"
+                BorderThickness="3"
+                CornerRadius="20"
+                Padding="20"
+                MinWidth="400"
+                MaxWidth="1000"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center">
             <StackPanel>
-                <TextBlock Text="NVIDIA (NVDA) Stock – Live Chart"
-                   FontSize="26"
-                   FontWeight="Bold"
-                   Foreground="#DAA520"
-                   Margin="0 0 0 20"
-                   HorizontalAlignment="Center"/>
+                <TextBlock Text="Microsoft (MSFT) – Live Chart"
+                           FontSize="26"
+                           FontWeight="Bold"
+                           Foreground="#DAA520"
+                           Margin="0 0 0 20"
+                           HorizontalAlignment="Center"/>
+
+                <TextBlock x:Name="LoadingText"
+                           Text="Loading..."
+                           FontSize="16"
+                           Foreground="Gray"
+                           HorizontalAlignment="Center"
+                           Margin="0 0 0 10" />
 
                 <lvc:CartesianChart x:Name="StockChart"
-                            Height="300"
-                            Series="{Binding Series}"
-                            XAxes="{Binding XAxes}"
-                            YAxes="{Binding YAxes}" />
+                                    Height="300"
+                                    Series="{Binding Series}"
+                                    XAxes="{Binding XAxes}"
+                                    YAxes="{Binding YAxes}" />
             </StackPanel>
         </Border>
     </Grid>
