@@ -15,12 +15,33 @@
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center">
             <StackPanel>
+
                 <TextBlock Text="Microsoft (MSFT)"
                            FontSize="26"
                            FontWeight="Bold"
                            Foreground="#DAA520"
                            Margin="0 0 0 20"
                            HorizontalAlignment="Center"/>
+
+                <!-- Kaufbereich -->
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 0 0 10">
+                    <TextBlock Text="Anzahl:"
+                               VerticalAlignment="Center"
+                               Margin="0 0 5 0"
+                               FontSize="14"/>
+                    <TextBox x:Name="QuantityInput"
+                             Width="80"
+                             Height="24"
+                             Margin="0 0 10 0"/>
+                    <Button Content="Aktie kaufen"
+                            Click="BuyStock_Click"
+                            Background="#DAA520"
+                            Foreground="White"
+                            FontWeight="Bold"
+                            Padding="6,2"
+                            BorderThickness="0"
+                            Cursor="Hand"/>
+                </StackPanel>
 
                 <TextBlock x:Name="LoadingText"
                            Text="Loading..."
@@ -43,6 +64,33 @@
                                     Series="{Binding Series}"
                                     XAxes="{Binding XAxes}"
                                     YAxes="{Binding YAxes}" />
+
+                <!-- Gesamtwert -->
+                <TextBlock x:Name="TotalValueText"
+                           FontSize="16"
+                           FontWeight="Bold"
+                           Foreground="#246795"
+                           HorizontalAlignment="Center"
+                           Margin="10 20 0 10"
+                           Text="Gesamtwert gekaufter Aktien: CHF 0.00" />
+
+                <!-- Tabelle gekaufter Aktien -->
+                <DataGrid x:Name="StockDataGrid"
+                          AutoGenerateColumns="False"
+                          HeadersVisibility="Column"
+                          IsReadOnly="True"
+                          Margin="0 10 0 0"
+                          MinHeight="200"
+                          CanUserResizeColumns="False"
+                          CanUserAddRows="False">
+
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Datum" Binding="{Binding PurchaseDate}" Width="*" />
+                        <DataGridTextColumn Header="Anzahl" Binding="{Binding Quantity}" Width="*" />
+                        <DataGridTextColumn Header="Kaufpreis" Binding="{Binding PurchasePrice}" Width="*" />
+                        <DataGridTextColumn Header="Current Value" Binding="{Binding CurrentValue}" Width="*" />
+                    </DataGrid.Columns>
+                </DataGrid>
             </StackPanel>
         </Border>
     </Grid>

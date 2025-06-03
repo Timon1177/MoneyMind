@@ -20,6 +20,8 @@ namespace MoneyMind
 
         private List<decimal> _priceValues;
         private List<string> _labels;
+        private readonly int _userId;
+        private decimal _userBalance;
 
         private bool _isRunning = false;
         private bool _isUpdating = false;
@@ -30,10 +32,13 @@ namespace MoneyMind
         public Axis[] XAxes { get; set; }
         public Axis[] YAxes { get; set; }
 
-        public StockPage()
+        public StockPage(int userId, decimal currentBalance)
         {
             InitializeComponent();
             DataContext = this;
+
+            _userId = userId;
+            _userBalance = currentBalance;
 
             _priceValues = new List<decimal>();
             _labels = new List<string>();
@@ -66,6 +71,8 @@ namespace MoneyMind
 
             _updateTimer = new System.Timers.Timer(12000);
             _updateTimer.Elapsed += async (s, e) => await Dispatcher.InvokeAsync(UpdateChart);
+
+            LoadPurchases();
         }
 
         public async void StartChartUpdates()
@@ -185,22 +192,21 @@ namespace MoneyMind
                         }
                     };
 
-                    if (DateTime.TryParse(timeStr, out var serverTime))
+                    if ((DateTime.UtcNow - DateTime.Parse(timeStr).ToUniversalTime()) > TimeSpan.FromMinutes(10))
                     {
-                        if ((DateTime.UtcNow - serverTime.ToUniversalTime()) > TimeSpan.FromMinutes(10))
-                        {
-                            MarketStatusText.Text = "Market is closed – showing last known price.";
-                            MarketStatusText.Visibility = Visibility.Visible;
-                        }
-                        else
-                        {
-                            MarketStatusText.Visibility = Visibility.Collapsed;
-                        }
+                        MarketStatusText.Text = "Market is closed – showing last known price.";
+                        MarketStatusText.Visibility = Visibility.Visible;
+                    }
+                    else
+                    {
+                        MarketStatusText.Visibility = Visibility.Collapsed;
                     }
 
                     OnPropertyChanged(nameof(Series));
                     OnPropertyChanged(nameof(XAxes));
                 }
+
+                LoadPurchases();
             }
             catch (Exception ex)
             {
@@ -210,6 +216,66 @@ namespace MoneyMind
             {
                 _isUpdating = false;
             }
+        }
+
+        private void BuyStock_Click(object sender, RoutedEventArgs e)
+        {
+            if (!int.TryParse(QuantityInput.Text, out int quantity) || quantity <= 0)
+            {
+                MessageBox.Show("Bitte gib eine gültige Anzahl ein.");
+                return;
+            }
+
+            if (_lastPrice == null)
+            {
+                MessageBox.Show("Kein aktueller Preis verfügbar.");
+                return;
+            }
+
+            var purchase = new StockPurchase
+            {
+                UserId = _userId,
+                Symbol = "MSFT",
+                Quantity = quantity,
+                PurchasePrice = _lastPrice.Value,
+                PurchaseDate = DateTime.Now
+            };
+
+            Database.InsertStockPurchase(purchase);
+            MessageBox.Show("Aktienkauf gespeichert.");
+            QuantityInput.Text = "";
+            LoadPurchases();
+        }
+
+        private void LoadPurchases()
+        {
+            var purchases = Database.GetStockPurchasesByUser(_userId);
+            var displayList = new List<dynamic>();
+
+            decimal totalValue = 0;
+
+            foreach (var p in purchases)
+            {
+                decimal currentValue = (_lastPrice ?? 0) * p.Quantity;
+                totalValue += currentValue;
+
+                displayList.Add(new
+                {
+                    PurchaseDate = p.PurchaseDate.ToString("yyyy-MM-dd HH:mm"),
+                    p.Quantity,
+                    PurchasePrice = $"CHF {p.PurchasePrice:F2}",
+                    CurrentValue = $"CHF {currentValue:F2}"
+                });
+            }
+
+            StockDataGrid.ItemsSource = displayList;
+            TotalValueText.Text = $"Gesamtwert gekaufter Aktien: CHF {totalValue:F2}";
+
+            _userBalance = Database.GetTotalIncome(_userId)
+                          - Database.GetTotalExpense(_userId)
+                          + totalValue;
+
+            Database.UpdateBalance(_userId, _userBalance);
         }
 
         public event PropertyChangedEventHandler? PropertyChanged;
