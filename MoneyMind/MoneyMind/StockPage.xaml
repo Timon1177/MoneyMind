@@ -15,7 +15,7 @@
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center">
             <StackPanel>
-                <TextBlock Text="Microsoft (MSFT) – Live Chart"
+                <TextBlock Text="Microsoft (MSFT)"
                            FontSize="26"
                            FontWeight="Bold"
                            Foreground="#DAA520"

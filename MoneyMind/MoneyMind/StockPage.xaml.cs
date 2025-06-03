@@ -64,7 +64,7 @@ namespace MoneyMind
                 }
             };
 
-            _updateTimer = new System.Timers.Timer(12000); // alle 12 Sekunden (max. 5/min)
+            _updateTimer = new System.Timers.Timer(12000);
             _updateTimer.Elapsed += async (s, e) => await Dispatcher.InvokeAsync(UpdateChart);
         }
 
@@ -98,9 +98,43 @@ namespace MoneyMind
                 }
 
                 var rawValues = data["values"] as JArray;
+
                 if (rawValues == null || rawValues.Count == 0)
                 {
-                    Console.WriteLine("No data returned.");
+                    if (_lastPrice != null && _lastTimestamp != null)
+                    {
+                        _priceValues.Add((decimal)_lastPrice);
+                        _labels.Add(DateTime.Now.ToString("HH:mm:ss"));
+
+                        if (_priceValues.Count > 30)
+                        {
+                            _priceValues.RemoveAt(0);
+                            _labels.RemoveAt(0);
+                        }
+
+                        Series = new ISeries[]
+                        {
+                            new LineSeries<decimal>
+                            {
+                                Values = _priceValues,
+                                Fill = null
+                            }
+                        };
+
+                        XAxes = new Axis[]
+                        {
+                            new Axis
+                            {
+                                Labels = _labels,
+                                LabelsRotation = 45
+                            }
+                        };
+
+                        MarketStatusText.Text = "Market is closed – showing last known price.";
+                        MarketStatusText.Visibility = Visibility.Visible;
+                        OnPropertyChanged(nameof(Series));
+                        OnPropertyChanged(nameof(XAxes));
+                    }
                     return;
                 }
 
@@ -112,7 +146,7 @@ namespace MoneyMind
                 {
                     if (_lastTimestamp == timeStr && _lastPrice == close)
                     {
-                        Console.WriteLine("No change – skipping update.");
+                        Console.WriteLine("No change, skipping update.");
                         return;
                     }
 
@@ -163,6 +197,9 @@ namespace MoneyMind
                             MarketStatusText.Visibility = Visibility.Collapsed;
                         }
                     }
+
+                    OnPropertyChanged(nameof(Series));
+                    OnPropertyChanged(nameof(XAxes));
                 }
             }
             catch (Exception ex)
