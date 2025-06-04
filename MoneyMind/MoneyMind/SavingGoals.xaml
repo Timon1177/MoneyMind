@@ -15,7 +15,6 @@
       <RowDefinition Height="*"/>
     </Grid.RowDefinitions>
 
-    <!-- Titel ganz oben -->
     <TextBlock Text="Saving Goals"
                Grid.Row="0"
                FontSize="32"

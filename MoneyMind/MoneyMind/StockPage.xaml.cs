@@ -222,13 +222,13 @@ namespace MoneyMind
         {
             if (!int.TryParse(QuantityInput.Text, out int quantity) || quantity <= 0)
             {
-                MessageBox.Show("Bitte gib eine gültige Anzahl ein.");
+                MessageBox.Show("Please enter a valid quantity.");
                 return;
             }
 
             if (_lastPrice == null)
             {
-                MessageBox.Show("Kein aktueller Preis verfügbar.");
+                MessageBox.Show("No current price available.");
                 return;
             }
 
@@ -242,7 +242,7 @@ namespace MoneyMind
             };
 
             Database.InsertStockPurchase(purchase);
-            MessageBox.Show("Aktienkauf gespeichert.");
+            MessageBox.Show("Stock purchase saved.");
             QuantityInput.Text = "";
             LoadPurchases();
         }
@@ -269,7 +269,7 @@ namespace MoneyMind
             }
 
             StockDataGrid.ItemsSource = displayList;
-            TotalValueText.Text = $"Gesamtwert gekaufter Aktien: CHF {totalValue:F2}";
+            TotalValueText.Text = $"Total value of purchased stocks: CHF {totalValue:F2}";
 
             _userBalance = Database.GetTotalIncome(_userId)
                           - Database.GetTotalExpense(_userId)

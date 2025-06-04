@@ -4,7 +4,7 @@
       xmlns:lvc="clr-namespace:LiveChartsCore.SkiaSharpView.WPF;assembly=LiveChartsCore.SkiaSharpView.WPF"
       Title="StockPage">
 
-    <Grid Background="White">
+    <Grid Background="#FFF8F0">
         <Border Background="White"
                 BorderBrush="#DAA520"
                 BorderThickness="3"
@@ -23,16 +23,18 @@
                            Margin="0 0 0 20"
                            HorizontalAlignment="Center"/>
 
-                <!-- Kaufbereich -->
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 0 0 10">
                     <TextBlock Text="Anzahl:"
                                VerticalAlignment="Center"
                                Margin="0 0 5 0"
-                               FontSize="14"/>
+                               FontSize="14"
+                               Foreground="#246795"/>
                     <TextBox x:Name="QuantityInput"
                              Width="80"
                              Height="24"
-                             Margin="0 0 10 0"/>
+                             Margin="0 0 10 0"
+                             BorderBrush="#DAA520"
+                             Foreground="Black"/>
                     <Button Content="Aktie kaufen"
                             Click="BuyStock_Click"
                             Background="#DAA520"
@@ -40,15 +42,9 @@
                             FontWeight="Bold"
                             Padding="6,2"
                             BorderThickness="0"
-                            Cursor="Hand"/>
+                            Cursor="Hand"
+                            Width="100"/>
                 </StackPanel>
-
-                <TextBlock x:Name="LoadingText"
-                           Text="Loading..."
-                           FontSize="16"
-                           Foreground="Gray"
-                           HorizontalAlignment="Center"
-                           Margin="0 0 0 10" />
 
                 <TextBlock x:Name="MarketStatusText"
                            Text="Market is closed – showing last known price."
@@ -56,7 +52,14 @@
                            FontStyle="Italic"
                            Foreground="DarkRed"
                            HorizontalAlignment="Center"
-                           Visibility="Collapsed"
+                           Margin="0 0 0 10"
+                           Visibility="Visible" />
+
+                <TextBlock x:Name="LoadingText"
+                           Text="Loading..."
+                           FontSize="16"
+                           Foreground="#246795"
+                           HorizontalAlignment="Center"
                            Margin="0 0 0 10" />
 
                 <lvc:CartesianChart x:Name="StockChart"
@@ -65,7 +68,6 @@
                                     XAxes="{Binding XAxes}"
                                     YAxes="{Binding YAxes}" />
 
-                <!-- Gesamtwert -->
                 <TextBlock x:Name="TotalValueText"
                            FontSize="16"
                            FontWeight="Bold"
@@ -74,7 +76,6 @@
                            Margin="10 20 0 10"
                            Text="Gesamtwert gekaufter Aktien: CHF 0.00" />
 
-                <!-- Tabelle gekaufter Aktien -->
                 <DataGrid x:Name="StockDataGrid"
                           AutoGenerateColumns="False"
                           HeadersVisibility="Column"
@@ -82,7 +83,15 @@
                           Margin="0 10 0 0"
                           MinHeight="200"
                           CanUserResizeColumns="False"
-                          CanUserAddRows="False">
+                          CanUserAddRows="False"
+                          GridLinesVisibility="None"
+                          RowBackground="White"
+                          AlternatingRowBackground="#FFF8F0"
+                          BorderBrush="#DAA520"
+                          BorderThickness="1"
+                          Foreground="Black"
+                          HorizontalGridLinesBrush="#DAA520"
+                          VerticalGridLinesBrush="#DAA520">
 
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="Datum" Binding="{Binding PurchaseDate}" Width="*" />

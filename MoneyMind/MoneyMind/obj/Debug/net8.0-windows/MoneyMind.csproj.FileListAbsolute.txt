@@ -1,5 +1,4 @@
-C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\OpenTK.dll
-C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\runtimes\linux-x64\native\SQLite.Interop.dll
+C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\runtimes\osx\native\libSkiaSharp.dylib
 C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\MoneyMind.exe
 C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\MoneyMind.deps.json
 C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\MoneyMind.runtimeconfig.json
@@ -12,6 +11,7 @@ C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-w
 C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\LiveChartsCore.SkiaSharpView.dll
 C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\LiveChartsCore.SkiaSharpView.WPF.dll
 C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\Newtonsoft.Json.dll
+C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\OpenTK.dll
 C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\GLWpfControl.dll
 C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\SkiaSharp.dll
 C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\SkiaSharp.HarfBuzz.dll
@@ -27,10 +27,10 @@ C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-w
 C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\runtimes\win-arm64\native\sni.dll
 C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\runtimes\win-x64\native\sni.dll
 C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\runtimes\win-x86\native\sni.dll
-C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\runtimes\osx\native\libSkiaSharp.dylib
 C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\runtimes\win-arm64\native\libSkiaSharp.dll
 C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\runtimes\win-x64\native\libSkiaSharp.dll
 C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\runtimes\win-x86\native\libSkiaSharp.dll
+C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\runtimes\linux-x64\native\SQLite.Interop.dll
 C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\runtimes\osx-x64\native\SQLite.Interop.dll
 C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\runtimes\win-x64\native\SQLite.Interop.dll
 C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\runtimes\win-x86\native\SQLite.Interop.dll

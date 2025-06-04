@@ -8,40 +8,46 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="UserPage">
 
-  <Grid Background="#F9F9F9">
-    <Border Background="White" 
-          CornerRadius="15"
-          Margin="30"
-          Padding="30"
-          BorderBrush="#DAA520"
-          BorderThickness="2"
-          HorizontalAlignment="Center"
-          VerticalAlignment="Center"
-          Width="450">
-      <StackPanel>
-        <TextBlock Text="Profile"
-                 FontSize="32"
-                 FontWeight="Bold"
-                 Foreground="#DAA520"
-                 TextAlignment="Center"
-                 Margin="0,0,0,20"/>
+    <Grid Background="#F9F9F9">
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="30">
 
-        <!-- First Name -->
-        <TextBlock Text="Firstname:" FontWeight="SemiBold" FontSize="16" Foreground="#555"/>
-        <TextBlock x:Name="firstname" Text="..." FontSize="18" FontWeight="Bold" Margin="0,0,0,10"/>
+            <Border Background="White" 
+              CornerRadius="15"
+              Padding="30"
+              BorderBrush="#DAA520"
+              BorderThickness="2"
+              Width="450">
+                <StackPanel>
+                    <TextBlock Text="Profile"
+                     FontSize="32"
+                     FontWeight="Bold"
+                     Foreground="#DAA520"
+                     TextAlignment="Center"
+                     Margin="0,0,0,20"/>
 
-        <!-- Last Name -->
-        <TextBlock Text="Lastname:" FontWeight="SemiBold" FontSize="16" Foreground="#555"/>
-        <TextBlock x:Name="lastname" Text="..." FontSize="18" FontWeight="Bold" Margin="0,0,0,10"/>
+                    <TextBlock Text="Firstname:" FontWeight="SemiBold" FontSize="16" Foreground="#555"/>
+                    <TextBlock x:Name="firstname" Text="..." FontSize="18" FontWeight="Bold" Margin="0,0,0,10"/>
 
-        <!-- Email -->
-        <TextBlock Text="E-Mail:" FontWeight="SemiBold" FontSize="16" Foreground="#555"/>
-        <TextBlock x:Name="email" Text="..." FontSize="18" FontWeight="Bold" Margin="0,0,0,10"/>
+                    <TextBlock Text="Lastname:" FontWeight="SemiBold" FontSize="16" Foreground="#555"/>
+                    <TextBlock x:Name="lastname" Text="..." FontSize="18" FontWeight="Bold" Margin="0,0,0,10"/>
 
-        <!-- Username -->
-        <TextBlock Text="Username:" FontWeight="SemiBold" FontSize="16" Foreground="#555"/>
-        <TextBlock x:Name="username" Text="..." FontSize="18" FontWeight="Bold" Margin="0,0,0,10"/>
-      </StackPanel>
-    </Border>
-  </Grid>
+                    <TextBlock Text="E-Mail:" FontWeight="SemiBold" FontSize="16" Foreground="#555"/>
+                    <TextBlock x:Name="email" Text="..." FontSize="18" FontWeight="Bold" Margin="0,0,0,10"/>
+
+                    <TextBlock Text="Username:" FontWeight="SemiBold" FontSize="16" Foreground="#555"/>
+                    <TextBlock x:Name="username" Text="..." FontSize="18" FontWeight="Bold" Margin="0,0,0,10"/>
+                </StackPanel>
+            </Border>
+
+            <Button Content="Delete Account"
+              Click="DeleteAccount_Click"
+              Background="#DAA520"
+              Foreground="White"
+              FontWeight="Bold"
+              Width="180"
+              Height="40"
+              Margin="0,20,0,0"
+              Cursor="Hand"/>
+        </StackPanel>
+    </Grid>
 </Page>

@@ -38,7 +38,7 @@ namespace MoneyMind
       if (!double.TryParse(SavingGoalAmountInput.Text.Replace(',', '.'), NumberStyles.Any, CultureInfo.InvariantCulture, out double amount)
           || amount <= 0 || string.IsNullOrWhiteSpace(name) || string.IsNullOrEmpty(deadline))
       {
-        MessageBox.Show("Please enter a valid name, amount, and deadline.");
+        MessageBox.Show("Please enter a valid goal name, amount, and deadline.");
         return;
       }
 
@@ -57,7 +57,7 @@ namespace MoneyMind
 
     public class SavingGoalsInfo
     {
-      public int GoalID { get; set; } // korrekt nach DB
+      public int GoalID { get; set; }
       public string GoalName { get; set; }
       public decimal TargetAmount { get; set; }
       public DateTime Deadline { get; set; }
@@ -72,14 +72,14 @@ namespace MoneyMind
       {
         goalsPanel.Children.Add(new TextBlock
         {
-          Text = "Keine Sparziele gefunden.",
+          Text = "No saving goals found.",
           FontSize = 18,
           Foreground = Brushes.Gray
         });
         return;
       }
 
-      decimal amount = 0;
+      decimal balance = 0;
       var connection = Database.Connection;
 
       string query = "SELECT amount FROM Balance WHERE fk_userID = @userID";
@@ -89,10 +89,9 @@ namespace MoneyMind
         object result = cmd.ExecuteScalar();
         if (result != null && decimal.TryParse(result.ToString(), out var value))
         {
-          amount = value;
+          balance = value;
         }
       }
-
 
       foreach (var goal in goals)
       {
@@ -130,13 +129,13 @@ namespace MoneyMind
 
         stack.Children.Add(new TextBlock
         {
-          Text = $"✅ Goal reached: {(amount/goal.TargetAmount*100):N2} %",
+          Text = $"✅ Progress: {(balance / goal.TargetAmount * 100):N2} %",
           FontSize = 14,
         });
 
         stack.Children.Add(new TextBlock
         {
-          Text = $"⏳ Remaining Days: {(goal.Deadline - DateTime.Now).Days} days",
+          Text = $"⏳ Days remaining: {(goal.Deadline - DateTime.Now).Days} days",
           FontSize = 14,
           Foreground = (goal.Deadline < DateTime.Now) ? Brushes.Red : Brushes.Green
         });
