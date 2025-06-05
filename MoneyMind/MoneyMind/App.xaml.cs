@@ -2,6 +2,7 @@
 using System.Data;
 using System.Windows;
 
+
 namespace MoneyMind
 {
   /// <summary>
@@ -9,6 +10,12 @@ namespace MoneyMind
   /// </summary>
   public partial class App : Application
   {
+    protected override void OnStartup(StartupEventArgs e)
+    {
+      base.OnStartup(e);
+      Database.InitializeDatabase();
+    }
+
   }
 
 }
