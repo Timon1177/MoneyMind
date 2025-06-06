@@ -42,6 +42,13 @@ namespace MoneyMind
         return;
       }
 
+      if (!DateTime.TryParseExact(deadline, "yyyy-MM-dd", CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime parsedDeadline)
+          || parsedDeadline < DateTime.Now)
+      {
+        MessageBox.Show("Please enter a valid deadline in the format yyyy-MM-dd and ensure it is a future date.");
+        return;
+      }
+
       var connection = Database.Connection;
       string insert = "INSERT INTO SavingGoals (GoalName, TargetAmount, DeadLine, fk_userID) VALUES (@name, @Tamt, @deadline, @userID)";
       using var cmd = new SQLiteCommand(insert, connection);
@@ -54,6 +61,7 @@ namespace MoneyMind
       CancelSavingGoalForm_Click(null, null);
       LoadSavingGoals();
     }
+
 
     public class SavingGoalsInfo
     {
