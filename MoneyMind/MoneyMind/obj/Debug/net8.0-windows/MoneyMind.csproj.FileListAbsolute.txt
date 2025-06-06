@@ -146,5 +146,10 @@ C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-w
 C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\sqlscripts\update.sql
 C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\obj\Debug\net8.0-windows\FeedbackPage.g.cs
 C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\obj\Debug\net8.0-windows\FeedbackPage.baml
+<<<<<<< HEAD
+C:\Users\timon\OneDrive - sluz\IMS Sursee_Luzern 2023-24\BBZW Sursee\Semester 4\IPT6.1\MoneyMind\MoneyMind\MoneyMind\obj\Debug\net8.0-windows\FeedbackPage.g.cs
+C:\Users\timon\OneDrive - sluz\IMS Sursee_Luzern 2023-24\BBZW Sursee\Semester 4\IPT6.1\MoneyMind\MoneyMind\MoneyMind\obj\Debug\net8.0-windows\FeedbackPage.baml
+=======
 C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\obj\Debug\net8.0-windows\EditUserPage.baml
 C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\obj\Debug\net8.0-windows\EditUserPage.g.cs
+>>>>>>> 17a70c3a4c5741c3cc000c57417f278a47d15750
