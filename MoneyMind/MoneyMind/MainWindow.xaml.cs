@@ -56,5 +56,12 @@ namespace MoneyMind
         {
             MainFrame.Navigate(new FeedbackPage());
         }
+
+        private void Logout_Click(object sender, RoutedEventArgs e)
+        {
+            var loginWindow = new Login();
+            loginWindow.Show();
+            this.Close();
+        }
     }
 }
