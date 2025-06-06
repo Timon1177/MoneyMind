@@ -12,16 +12,16 @@ DELETE FROM users WHERE Username = 'TestUser';
 INSERT INTO users (firstname, lastname, Username, Password, Balance, email) 
 VALUES ('Max', 'Mustermann', 'TestUser', 'TestPW', 0, 'test@test.ch');
 
-INSERT INTO Income (fk_userID, Amount, Type, Category, Date)
+INSERT INTO Income (fk_userID, Amount, Category)
 VALUES (
     (SELECT id FROM users WHERE Username = 'TestUser'),
-    500, 'Fixed', 'Salary', '2025-06-01'
+    500, 'Salary'
 );
 
-INSERT INTO Expenses (fk_userID, Amount, Type, Category, Date)
+INSERT INTO Expenses (fk_userID, Amount, Type, Category)
 VALUES (
     (SELECT id FROM users WHERE Username = 'TestUser'),
-    200, 'Fixed', 'Rent', '2025-06-02'
+    200, 'Fixed', 'Rent'
 );
 
 INSERT INTO SavingGoals (GoalName, TargetAmount, DeadLine, fk_userID)

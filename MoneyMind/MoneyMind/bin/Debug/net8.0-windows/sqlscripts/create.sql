@@ -9,9 +9,7 @@ CREATE TABLE IF NOT EXISTS Income (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     fk_userID INTEGER NOT NULL,
     Amount DECIMAL NOT NULL,
-    Type TEXT NOT NULL,
     Category TEXT NOT NULL,
-    Date TEXT NOT NULL,
     FOREIGN KEY (fk_userID) REFERENCES users(id)
 );
 
@@ -21,7 +19,6 @@ CREATE TABLE IF NOT EXISTS Expenses (
     Amount DECIMAL NOT NULL,
     Type TEXT NOT NULL,
     Category TEXT NOT NULL,
-    Date TEXT NOT NULL,
     FOREIGN KEY (fk_userID) REFERENCES users(id)
 );
 
