@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35327.3
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoneyMind", "MoneyMind\MoneyMind.csproj", "{7F757A09-79B5-4647-BFE7-48E07AC8C147}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MoneyMind", "MoneyMind\MoneyMind.csproj", "{7F757A09-79B5-4647-BFE7-48E07AC8C147}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoneyMind.Tests", "MoneyMind.Tests\MoneyMind.Tests.csproj", "{E2180FE1-75DC-4395-B97F-04BC1880DA24}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{7F757A09-79B5-4647-BFE7-48E07AC8C147}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7F757A09-79B5-4647-BFE7-48E07AC8C147}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7F757A09-79B5-4647-BFE7-48E07AC8C147}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2180FE1-75DC-4395-B97F-04BC1880DA24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2180FE1-75DC-4395-B97F-04BC1880DA24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2180FE1-75DC-4395-B97F-04BC1880DA24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2180FE1-75DC-4395-B97F-04BC1880DA24}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
