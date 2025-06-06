@@ -57,6 +57,12 @@ namespace MoneyMind
       this.Close();
     }
 
+    private void BtnInsert_Click(object sender, RoutedEventArgs e)
+    {
+      Database.insertTestData();
+      btninsert.Visibility = Visibility.Hidden;
+    }
+
     private void BtnLogin_Click(object sender, RoutedEventArgs e)
     {
       string username = txtUsername.Text;

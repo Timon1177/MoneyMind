@@ -99,6 +99,16 @@ namespace MoneyMind
       return list;
     }
 
+    public static void insertTestData()
+    {
+      string insertPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "sqlscripts", "insert.sql");
+      if (File.Exists(insertPath))
+      {
+        ExecuteSqlScript(insertPath);
+        System.Diagnostics.Debug.WriteLine("insert.sql executed.");
+      }
+    }
+
     public static void InitializeDatabase()
     {
       try
@@ -133,12 +143,7 @@ namespace MoneyMind
           Console.WriteLine("update.sql executed.");
         }
 
-        string insertPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "sqlscripts", "insert.sql");
-        if (File.Exists(insertPath))
-        {
-          ExecuteSqlScript(insertPath);
-          System.Diagnostics.Debug.WriteLine("insert.sql executed.");
-        }
+        
       }
       catch (Exception ex)
       {
