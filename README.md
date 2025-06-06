@@ -109,6 +109,29 @@ Diese Datei dokumentiert alle vom Benutzer auszufüllenden Felder inklusive Date
 
 ## Dokumentation
 
+* **Markdown-Dokumentation**:
+  - Alle projektrelevanten Inhalte (Ziele, Architektur, Validierung) sind direkt im README dokumentiert.
+  - Zusätzliche Notizen und Planungen befinden sich im Ordner `/Dokumentation/` (falls vorhanden).
+
+* **Validierung & Pflichtfelder**:
+  - Alle Eingabefelder, Datentypen und Validierungsregeln sind im Abschnitt **„Eingabefelder & Validierung“** dokumentiert (inkl. Pflichtfelder).
+
+* **Unit Testing & Architekturprinzipien**:
+  - Unit Tests mit xUnit prüfen zentrale Logik (z. B. Transaktionen, Datenbankverbindung).
+  - Datenbankverbindung über **Singleton Pattern** implementiert.
+  - Logik durch **Interfaces** abstrahiert (z. B. für Transaktionen und Benutzerverwaltung).
+
+* **Diagramme & Visualisierungen**:
+  - ER-Modell, relationales Modell, UML-Diagramm und Programmablaufplan sind im Ordner `/Diagramme/` gespeichert und oben eingebunden.
+  - Mockups der Benutzeroberfläche liegen im Ordner `/Mockup/`.
+
+* **Objektorientierte Prinzipien**:
+  - Vererbung: `Income` und `Expense` erben von `Transaction`.
+  - Polymorphismus: Einheitliche Methoden dank Interface `ITransactionService`.
+  - Abstraktion: Gemeinsame Methoden in Basisklassen ausgelagert.
+
+* **Stocks**:
+  - Wir nahmen uns eigentlich in der Mitte des Projektes das Ziel mithilfe einer API ein Stock hinzuzufügen in welchen man investieren kann. Wir kamen mithilfe eines Tutorials gut voran jedoch reichte die Zeit nicht dies ganz zu beenden. Wir werden dies in naher Zukunft aber noch machen. 
 ---
 
 ## Modulzuordnung & Anforderungen
