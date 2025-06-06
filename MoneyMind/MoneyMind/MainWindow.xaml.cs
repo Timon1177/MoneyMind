@@ -52,5 +52,9 @@ namespace MoneyMind
             Database.Close();
             Application.Current.Shutdown();
         }
+        private void NavigateFeedback_Click(object sender, RoutedEventArgs e)
+        {
+            MainFrame.Navigate(new FeedbackPage());
+        }
     }
 }
