@@ -7,6 +7,9 @@ WHERE fk_userID = (SELECT id FROM users WHERE Username = 'TestUser');
 DELETE FROM SavingGoals
 WHERE fk_userID = (SELECT id FROM users WHERE Username = 'TestUser');
 
+DELETE FROM Feedback
+WHERE Email = 'test@example.com';
+
 DELETE FROM users WHERE Username = 'TestUser';
 
 INSERT INTO users (firstname, lastname, Username, Password, Balance, email) 
@@ -29,3 +32,7 @@ VALUES (
     'Vacation', 1500, '2025-12-31',
     (SELECT id FROM users WHERE Username = 'TestUser')
 );
+
+INSERT INTO Feedback (Title, Message, Email)
+VALUES 
+('Test Feedback', 'This is a test feedback message.', 'test@example.com');
