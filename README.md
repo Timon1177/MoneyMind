@@ -1,6 +1,79 @@
 # MoneyMind
 
-**MoneyMind** ist eine Desktop-Anwendung zur Verwaltung von Einnahmen, Ausgaben und Sparzielen. Sie wurde im Rahmen des IPT6.1 Projekts im 2. Ausbildungsjahr der IMS entwickelt. Ziel war es, eine benutzerfreundliche, objektorientierte Applikation in C# mit lokaler SQLite-Datenbank zu erstellen, die den Anforderungen aus den Modulen 106, 162, 164, 319, 320 und 322 gerecht wird.
+**MoneyMind** ist eine App zur Verwaltung von Einnahmen, Ausgaben und Sparzielen. Sie wurde im Rahmen des IPT6.1 Projekts im 2. Ausbildungsjahr der IMS entwickelt.
+
+---
+
+## Features
+
+* 📥 Einnahmen & Ausgaben erfassen
+* 🎯 Sparziele hinzufügen und verwalten
+* 👤 Benutzerregistrierung & Login
+* 💾 Lokale Datenspeicherung mit SQLite
+* 🔄 SQL-Skripte für Setup, Update & Beispielinhalt
+* 🧪 Unit Tests für zentrale Logik
+* 🧩 Verwendung von Interfaces & Singleton-Pattern
+
+---
+
+## Technologien
+
+| Bereich     | Technologie                 |
+| ----------- | --------------------------- |
+| Frontend    | WPF (.NET)                  |
+| Backend     | C# (OOP)                    |
+| Datenbank   | SQLite + SQL Scripts        |
+| Architektur | MVVM, Interfaces, Singleton |
+| Testing     | MSTest / xUnit              |
+
+---
+
+## Installation
+
+1. Repository klonen:
+
+```bash
+git clone https://github.com/Timon1177/MoneyMind.git
+```
+
+2. Projekt mit Visual Studio öffnen
+3. Build starten (inkl. Restore)
+4. Anwendung ausführen
+
+---
+
+## Diagramme
+
+### ER-Modell
+
+![ER-Modell](./Diagramme/ER_.png)
+
+### UML-Klassendiagramm
+
+![UML-Diagramm](./Diagramme/UML_Diagramm.png)
+
+### Programmablaufplan
+
+![Programmablaufplan](./Diagramme/Programmablaufplan.png)
+
+---
+
+## Video
+
+[Projektvideo ansehen](./Video.mp4)
+
+---
+
+## Nutzung
+
+1. Benutzerkonto erstellen oder einloggen
+2. Einnahmen/Ausgaben erfassen
+3. Sparziele setzen & verfolgen
+4. Daten über das Hauptmenü verwalten
+
+---
+
+## Dokumentation
 
 ---
 
@@ -42,82 +115,9 @@
 
 ---
 
-## Features
-
-* 📥 Einnahmen & Ausgaben erfassen
-* 🎯 Sparziele hinzufügen und verwalten
-* 👤 Benutzerregistrierung & Login
-* 💾 Lokale Datenspeicherung mit SQLite
-* 🔄 SQL-Skripte für Setup, Update & Beispielinhalt
-* 🧪 Unit Tests für zentrale Logik
-* 🧩 Verwendung von Interfaces & Singleton-Pattern
-
----
-
-## Technologien
-
-| Bereich     | Technologie                 |
-| ----------- | --------------------------- |
-| Frontend    | WPF (.NET)                  |
-| Backend     | C# (OOP)                    |
-| Datenbank   | SQLite + SQL Scripts        |
-| Architektur | MVVM, Interfaces, Singleton |
-| Testing     | MSTest / xUnit              |
-
----
-
-## Diagramme
-
-### ER-Modell
-
-![ER-Modell](./Diagramme/ER_Modell.png)
-
-### UML-Klassendiagramm
-
-![UML-Diagramm](./Diagramme/UML_Diagramm.png)
-
-### Programmablaufplan
-
-![Programmablaufplan](./Diagramme/Programmablaufplan.png)
-
----
-
-## Installation
-
-1. Repository klonen:
-
-```bash
-git clone https://github.com/Timon1177/MoneyMind.git
-```
-
-2. Projekt mit Visual Studio öffnen
-3. Build starten (inkl. Restore)
-4. Anwendung ausführen
-
----
-
-## Nutzung
-
-1. Benutzerkonto erstellen oder einloggen
-2. Einnahmen/Ausgaben erfassen
-3. Sparziele setzen & verfolgen
-4. Daten über das Hauptmenü verwalten
-
----
-
-## Dokumentation
-
-* SQL-Skripte unter `/create_database/`
-* Projekttagebuch und weitere Inhalte unter `/Dokumentation/`
-
----
-
 ## Team
 
 Dieses Projekt wurde im 2. Jahr an der Informatikmittelschule Luzern im Rahmen des IPT6.1-Projekts von Timon & Kay umgesetzt.
 
----
 
-## Präsentation
 
-*Das Projektvideo wird zum Abgabetermin am 06.06.2025 nachgereicht.*
