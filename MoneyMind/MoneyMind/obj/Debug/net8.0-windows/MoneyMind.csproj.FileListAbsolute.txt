@@ -1,4 +1,6 @@
-C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\runtimes\osx\native\libSkiaSharp.dylib
+C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\sqlscripts\create.sql
+C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\sqlscripts\insert.sql
+C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\sqlscripts\update.sql
 C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\MoneyMind.exe
 C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\MoneyMind.deps.json
 C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\MoneyMind.runtimeconfig.json
@@ -27,6 +29,7 @@ C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-w
 C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\runtimes\win-arm64\native\sni.dll
 C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\runtimes\win-x64\native\sni.dll
 C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\runtimes\win-x86\native\sni.dll
+C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\runtimes\osx\native\libSkiaSharp.dylib
 C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\runtimes\win-arm64\native\libSkiaSharp.dll
 C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\runtimes\win-x64\native\libSkiaSharp.dll
 C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\runtimes\win-x86\native\libSkiaSharp.dll
@@ -37,11 +40,14 @@ C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-w
 C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\obj\Debug\net8.0-windows\MoneyMind.csproj.AssemblyReference.cache
+C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\obj\Debug\net8.0-windows\EditUserPage.baml
 C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\obj\Debug\net8.0-windows\IncomePage.baml
 C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\obj\Debug\net8.0-windows\Login.baml
 C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\obj\Debug\net8.0-windows\MainWindow.baml
 C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\obj\Debug\net8.0-windows\Register.baml
 C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\obj\Debug\net8.0-windows\StockPage.baml
+C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\obj\Debug\net8.0-windows\EditUserPage.g.cs
+C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\obj\Debug\net8.0-windows\FeedbackPage.g.cs
 C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\obj\Debug\net8.0-windows\IncomePage.g.cs
 C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\obj\Debug\net8.0-windows\Login.g.cs
 C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\obj\Debug\net8.0-windows\MainWindow.g.cs
@@ -53,6 +59,7 @@ C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\obj\Debug\net8.0-w
 C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\obj\Debug\net8.0-windows\App.g.cs
 C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\obj\Debug\net8.0-windows\MoneyMind_MarkupCompile.cache
 C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\obj\Debug\net8.0-windows\MoneyMind_MarkupCompile.lref
+C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\obj\Debug\net8.0-windows\FeedbackPage.baml
 C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\obj\Debug\net8.0-windows\SavingGoals.baml
 C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\obj\Debug\net8.0-windows\StartPage.baml
 C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\obj\Debug\net8.0-windows\UserPage.baml
@@ -68,88 +75,3 @@ C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\obj\Debug\net8.0-w
 C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\obj\Debug\net8.0-windows\MoneyMind.pdb
 C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\obj\Debug\net8.0-windows\MoneyMind.genruntimeconfig.cache
 C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\obj\Debug\net8.0-windows\ref\MoneyMind.dll
-C:\Users\timon\OneDrive - sluz\IMS Sursee_Luzern 2023-24\BBZW Sursee\Semester 4\IPT6.1\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\MoneyMind.exe
-C:\Users\timon\OneDrive - sluz\IMS Sursee_Luzern 2023-24\BBZW Sursee\Semester 4\IPT6.1\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\MoneyMind.deps.json
-C:\Users\timon\OneDrive - sluz\IMS Sursee_Luzern 2023-24\BBZW Sursee\Semester 4\IPT6.1\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\MoneyMind.runtimeconfig.json
-C:\Users\timon\OneDrive - sluz\IMS Sursee_Luzern 2023-24\BBZW Sursee\Semester 4\IPT6.1\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\MoneyMind.dll
-C:\Users\timon\OneDrive - sluz\IMS Sursee_Luzern 2023-24\BBZW Sursee\Semester 4\IPT6.1\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\MoneyMind.pdb
-C:\Users\timon\OneDrive - sluz\IMS Sursee_Luzern 2023-24\BBZW Sursee\Semester 4\IPT6.1\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\EntityFramework.SqlServer.dll
-C:\Users\timon\OneDrive - sluz\IMS Sursee_Luzern 2023-24\BBZW Sursee\Semester 4\IPT6.1\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\EntityFramework.dll
-C:\Users\timon\OneDrive - sluz\IMS Sursee_Luzern 2023-24\BBZW Sursee\Semester 4\IPT6.1\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\HarfBuzzSharp.dll
-C:\Users\timon\OneDrive - sluz\IMS Sursee_Luzern 2023-24\BBZW Sursee\Semester 4\IPT6.1\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\LiveChartsCore.dll
-C:\Users\timon\OneDrive - sluz\IMS Sursee_Luzern 2023-24\BBZW Sursee\Semester 4\IPT6.1\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\LiveChartsCore.SkiaSharpView.dll
-C:\Users\timon\OneDrive - sluz\IMS Sursee_Luzern 2023-24\BBZW Sursee\Semester 4\IPT6.1\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\LiveChartsCore.SkiaSharpView.WPF.dll
-C:\Users\timon\OneDrive - sluz\IMS Sursee_Luzern 2023-24\BBZW Sursee\Semester 4\IPT6.1\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\Newtonsoft.Json.dll
-C:\Users\timon\OneDrive - sluz\IMS Sursee_Luzern 2023-24\BBZW Sursee\Semester 4\IPT6.1\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\OpenTK.dll
-C:\Users\timon\OneDrive - sluz\IMS Sursee_Luzern 2023-24\BBZW Sursee\Semester 4\IPT6.1\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\GLWpfControl.dll
-C:\Users\timon\OneDrive - sluz\IMS Sursee_Luzern 2023-24\BBZW Sursee\Semester 4\IPT6.1\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\SkiaSharp.dll
-C:\Users\timon\OneDrive - sluz\IMS Sursee_Luzern 2023-24\BBZW Sursee\Semester 4\IPT6.1\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\SkiaSharp.HarfBuzz.dll
-C:\Users\timon\OneDrive - sluz\IMS Sursee_Luzern 2023-24\BBZW Sursee\Semester 4\IPT6.1\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\SkiaSharp.Views.Desktop.Common.dll
-C:\Users\timon\OneDrive - sluz\IMS Sursee_Luzern 2023-24\BBZW Sursee\Semester 4\IPT6.1\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\SkiaSharp.Views.WPF.dll
-C:\Users\timon\OneDrive - sluz\IMS Sursee_Luzern 2023-24\BBZW Sursee\Semester 4\IPT6.1\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\System.Data.SQLite.dll
-C:\Users\timon\OneDrive - sluz\IMS Sursee_Luzern 2023-24\BBZW Sursee\Semester 4\IPT6.1\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\System.Data.SqlClient.dll
-C:\Users\timon\OneDrive - sluz\IMS Sursee_Luzern 2023-24\BBZW Sursee\Semester 4\IPT6.1\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\System.Data.SQLite.EF6.dll
-C:\Users\timon\OneDrive - sluz\IMS Sursee_Luzern 2023-24\BBZW Sursee\Semester 4\IPT6.1\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\runtimes\osx\native\libHarfBuzzSharp.dylib
-C:\Users\timon\OneDrive - sluz\IMS Sursee_Luzern 2023-24\BBZW Sursee\Semester 4\IPT6.1\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\runtimes\win-arm64\native\libHarfBuzzSharp.dll
-C:\Users\timon\OneDrive - sluz\IMS Sursee_Luzern 2023-24\BBZW Sursee\Semester 4\IPT6.1\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\runtimes\win-x64\native\libHarfBuzzSharp.dll
-C:\Users\timon\OneDrive - sluz\IMS Sursee_Luzern 2023-24\BBZW Sursee\Semester 4\IPT6.1\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\runtimes\win-x86\native\libHarfBuzzSharp.dll
-C:\Users\timon\OneDrive - sluz\IMS Sursee_Luzern 2023-24\BBZW Sursee\Semester 4\IPT6.1\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\runtimes\win-arm64\native\sni.dll
-C:\Users\timon\OneDrive - sluz\IMS Sursee_Luzern 2023-24\BBZW Sursee\Semester 4\IPT6.1\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\runtimes\win-x64\native\sni.dll
-C:\Users\timon\OneDrive - sluz\IMS Sursee_Luzern 2023-24\BBZW Sursee\Semester 4\IPT6.1\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\runtimes\win-x86\native\sni.dll
-C:\Users\timon\OneDrive - sluz\IMS Sursee_Luzern 2023-24\BBZW Sursee\Semester 4\IPT6.1\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\runtimes\osx\native\libSkiaSharp.dylib
-C:\Users\timon\OneDrive - sluz\IMS Sursee_Luzern 2023-24\BBZW Sursee\Semester 4\IPT6.1\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\runtimes\win-arm64\native\libSkiaSharp.dll
-C:\Users\timon\OneDrive - sluz\IMS Sursee_Luzern 2023-24\BBZW Sursee\Semester 4\IPT6.1\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\runtimes\win-x64\native\libSkiaSharp.dll
-C:\Users\timon\OneDrive - sluz\IMS Sursee_Luzern 2023-24\BBZW Sursee\Semester 4\IPT6.1\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\runtimes\win-x86\native\libSkiaSharp.dll
-C:\Users\timon\OneDrive - sluz\IMS Sursee_Luzern 2023-24\BBZW Sursee\Semester 4\IPT6.1\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\runtimes\linux-x64\native\SQLite.Interop.dll
-C:\Users\timon\OneDrive - sluz\IMS Sursee_Luzern 2023-24\BBZW Sursee\Semester 4\IPT6.1\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\runtimes\osx-x64\native\SQLite.Interop.dll
-C:\Users\timon\OneDrive - sluz\IMS Sursee_Luzern 2023-24\BBZW Sursee\Semester 4\IPT6.1\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\runtimes\win-x64\native\SQLite.Interop.dll
-C:\Users\timon\OneDrive - sluz\IMS Sursee_Luzern 2023-24\BBZW Sursee\Semester 4\IPT6.1\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\runtimes\win-x86\native\SQLite.Interop.dll
-C:\Users\timon\OneDrive - sluz\IMS Sursee_Luzern 2023-24\BBZW Sursee\Semester 4\IPT6.1\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
-C:\Users\timon\OneDrive - sluz\IMS Sursee_Luzern 2023-24\BBZW Sursee\Semester 4\IPT6.1\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
-C:\Users\timon\OneDrive - sluz\IMS Sursee_Luzern 2023-24\BBZW Sursee\Semester 4\IPT6.1\MoneyMind\MoneyMind\MoneyMind\obj\Debug\net8.0-windows\MoneyMind.csproj.AssemblyReference.cache
-C:\Users\timon\OneDrive - sluz\IMS Sursee_Luzern 2023-24\BBZW Sursee\Semester 4\IPT6.1\MoneyMind\MoneyMind\MoneyMind\obj\Debug\net8.0-windows\IncomePage.baml
-C:\Users\timon\OneDrive - sluz\IMS Sursee_Luzern 2023-24\BBZW Sursee\Semester 4\IPT6.1\MoneyMind\MoneyMind\MoneyMind\obj\Debug\net8.0-windows\Login.baml
-C:\Users\timon\OneDrive - sluz\IMS Sursee_Luzern 2023-24\BBZW Sursee\Semester 4\IPT6.1\MoneyMind\MoneyMind\MoneyMind\obj\Debug\net8.0-windows\MainWindow.baml
-C:\Users\timon\OneDrive - sluz\IMS Sursee_Luzern 2023-24\BBZW Sursee\Semester 4\IPT6.1\MoneyMind\MoneyMind\MoneyMind\obj\Debug\net8.0-windows\Register.baml
-C:\Users\timon\OneDrive - sluz\IMS Sursee_Luzern 2023-24\BBZW Sursee\Semester 4\IPT6.1\MoneyMind\MoneyMind\MoneyMind\obj\Debug\net8.0-windows\StockPage.baml
-C:\Users\timon\OneDrive - sluz\IMS Sursee_Luzern 2023-24\BBZW Sursee\Semester 4\IPT6.1\MoneyMind\MoneyMind\MoneyMind\obj\Debug\net8.0-windows\IncomePage.g.cs
-C:\Users\timon\OneDrive - sluz\IMS Sursee_Luzern 2023-24\BBZW Sursee\Semester 4\IPT6.1\MoneyMind\MoneyMind\MoneyMind\obj\Debug\net8.0-windows\Login.g.cs
-C:\Users\timon\OneDrive - sluz\IMS Sursee_Luzern 2023-24\BBZW Sursee\Semester 4\IPT6.1\MoneyMind\MoneyMind\MoneyMind\obj\Debug\net8.0-windows\MainWindow.g.cs
-C:\Users\timon\OneDrive - sluz\IMS Sursee_Luzern 2023-24\BBZW Sursee\Semester 4\IPT6.1\MoneyMind\MoneyMind\MoneyMind\obj\Debug\net8.0-windows\Register.g.cs
-C:\Users\timon\OneDrive - sluz\IMS Sursee_Luzern 2023-24\BBZW Sursee\Semester 4\IPT6.1\MoneyMind\MoneyMind\MoneyMind\obj\Debug\net8.0-windows\SavingGoals.g.cs
-C:\Users\timon\OneDrive - sluz\IMS Sursee_Luzern 2023-24\BBZW Sursee\Semester 4\IPT6.1\MoneyMind\MoneyMind\MoneyMind\obj\Debug\net8.0-windows\StartPage.g.cs
-C:\Users\timon\OneDrive - sluz\IMS Sursee_Luzern 2023-24\BBZW Sursee\Semester 4\IPT6.1\MoneyMind\MoneyMind\MoneyMind\obj\Debug\net8.0-windows\StockPage.g.cs
-C:\Users\timon\OneDrive - sluz\IMS Sursee_Luzern 2023-24\BBZW Sursee\Semester 4\IPT6.1\MoneyMind\MoneyMind\MoneyMind\obj\Debug\net8.0-windows\UserPage.g.cs
-C:\Users\timon\OneDrive - sluz\IMS Sursee_Luzern 2023-24\BBZW Sursee\Semester 4\IPT6.1\MoneyMind\MoneyMind\MoneyMind\obj\Debug\net8.0-windows\App.g.cs
-C:\Users\timon\OneDrive - sluz\IMS Sursee_Luzern 2023-24\BBZW Sursee\Semester 4\IPT6.1\MoneyMind\MoneyMind\MoneyMind\obj\Debug\net8.0-windows\MoneyMind_MarkupCompile.cache
-C:\Users\timon\OneDrive - sluz\IMS Sursee_Luzern 2023-24\BBZW Sursee\Semester 4\IPT6.1\MoneyMind\MoneyMind\MoneyMind\obj\Debug\net8.0-windows\MoneyMind_MarkupCompile.lref
-C:\Users\timon\OneDrive - sluz\IMS Sursee_Luzern 2023-24\BBZW Sursee\Semester 4\IPT6.1\MoneyMind\MoneyMind\MoneyMind\obj\Debug\net8.0-windows\SavingGoals.baml
-C:\Users\timon\OneDrive - sluz\IMS Sursee_Luzern 2023-24\BBZW Sursee\Semester 4\IPT6.1\MoneyMind\MoneyMind\MoneyMind\obj\Debug\net8.0-windows\StartPage.baml
-C:\Users\timon\OneDrive - sluz\IMS Sursee_Luzern 2023-24\BBZW Sursee\Semester 4\IPT6.1\MoneyMind\MoneyMind\MoneyMind\obj\Debug\net8.0-windows\UserPage.baml
-C:\Users\timon\OneDrive - sluz\IMS Sursee_Luzern 2023-24\BBZW Sursee\Semester 4\IPT6.1\MoneyMind\MoneyMind\MoneyMind\obj\Debug\net8.0-windows\MoneyMind.g.resources
-C:\Users\timon\OneDrive - sluz\IMS Sursee_Luzern 2023-24\BBZW Sursee\Semester 4\IPT6.1\MoneyMind\MoneyMind\MoneyMind\obj\Debug\net8.0-windows\MoneyMind.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\timon\OneDrive - sluz\IMS Sursee_Luzern 2023-24\BBZW Sursee\Semester 4\IPT6.1\MoneyMind\MoneyMind\MoneyMind\obj\Debug\net8.0-windows\MoneyMind.AssemblyInfoInputs.cache
-C:\Users\timon\OneDrive - sluz\IMS Sursee_Luzern 2023-24\BBZW Sursee\Semester 4\IPT6.1\MoneyMind\MoneyMind\MoneyMind\obj\Debug\net8.0-windows\MoneyMind.AssemblyInfo.cs
-C:\Users\timon\OneDrive - sluz\IMS Sursee_Luzern 2023-24\BBZW Sursee\Semester 4\IPT6.1\MoneyMind\MoneyMind\MoneyMind\obj\Debug\net8.0-windows\MoneyMind.csproj.CoreCompileInputs.cache
-C:\Users\timon\OneDrive - sluz\IMS Sursee_Luzern 2023-24\BBZW Sursee\Semester 4\IPT6.1\MoneyMind\MoneyMind\MoneyMind\obj\Debug\net8.0-windows\MoneyMind.sourcelink.json
-C:\Users\timon\OneDrive - sluz\IMS Sursee_Luzern 2023-24\BBZW Sursee\Semester 4\IPT6.1\MoneyMind\MoneyMind\MoneyMind\obj\Debug\net8.0-windows\MoneyMind.csproj.Up2Date
-C:\Users\timon\OneDrive - sluz\IMS Sursee_Luzern 2023-24\BBZW Sursee\Semester 4\IPT6.1\MoneyMind\MoneyMind\MoneyMind\obj\Debug\net8.0-windows\MoneyMind.dll
-C:\Users\timon\OneDrive - sluz\IMS Sursee_Luzern 2023-24\BBZW Sursee\Semester 4\IPT6.1\MoneyMind\MoneyMind\MoneyMind\obj\Debug\net8.0-windows\refint\MoneyMind.dll
-C:\Users\timon\OneDrive - sluz\IMS Sursee_Luzern 2023-24\BBZW Sursee\Semester 4\IPT6.1\MoneyMind\MoneyMind\MoneyMind\obj\Debug\net8.0-windows\MoneyMind.pdb
-C:\Users\timon\OneDrive - sluz\IMS Sursee_Luzern 2023-24\BBZW Sursee\Semester 4\IPT6.1\MoneyMind\MoneyMind\MoneyMind\obj\Debug\net8.0-windows\MoneyMind.genruntimeconfig.cache
-C:\Users\timon\OneDrive - sluz\IMS Sursee_Luzern 2023-24\BBZW Sursee\Semester 4\IPT6.1\MoneyMind\MoneyMind\MoneyMind\obj\Debug\net8.0-windows\ref\MoneyMind.dll
-C:\Users\timon\OneDrive - sluz\IMS Sursee_Luzern 2023-24\BBZW Sursee\Semester 4\IPT6.1\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\sqlscripts\create.sql
-C:\Users\timon\OneDrive - sluz\IMS Sursee_Luzern 2023-24\BBZW Sursee\Semester 4\IPT6.1\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\sqlscripts\update.sql
-C:\Users\timon\OneDrive - sluz\IMS Sursee_Luzern 2023-24\BBZW Sursee\Semester 4\IPT6.1\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\sqlscripts\insert.sql
-C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\sqlscripts\create.sql
-C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\sqlscripts\insert.sql
-C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\bin\Debug\net8.0-windows\sqlscripts\update.sql
-C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\obj\Debug\net8.0-windows\FeedbackPage.g.cs
-C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\obj\Debug\net8.0-windows\FeedbackPage.baml
-<<<<<<< HEAD
-C:\Users\timon\OneDrive - sluz\IMS Sursee_Luzern 2023-24\BBZW Sursee\Semester 4\IPT6.1\MoneyMind\MoneyMind\MoneyMind\obj\Debug\net8.0-windows\FeedbackPage.g.cs
-C:\Users\timon\OneDrive - sluz\IMS Sursee_Luzern 2023-24\BBZW Sursee\Semester 4\IPT6.1\MoneyMind\MoneyMind\MoneyMind\obj\Debug\net8.0-windows\FeedbackPage.baml
-=======
-C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\obj\Debug\net8.0-windows\EditUserPage.baml
-C:\Users\kaytr\Desktop\Projekte\MoneyMind\MoneyMind\MoneyMind\obj\Debug\net8.0-windows\EditUserPage.g.cs
->>>>>>> 17a70c3a4c5741c3cc000c57417f278a47d15750

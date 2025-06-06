@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MoneyMind.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a7cb5c25e77bfafebe3c95df1aafb8859d362529")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0adb0a12f75c8056dc4853677a57e4afa5e104e2")]
 [assembly: System.Reflection.AssemblyProductAttribute("MoneyMind.Tests")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MoneyMind.Tests")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

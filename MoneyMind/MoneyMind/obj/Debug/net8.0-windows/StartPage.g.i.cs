@@ -61,7 +61,7 @@ namespace MoneyMind {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/MoneyMind;V1.0.0.0;component/startpage.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/MoneyMind;component/startpage.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\StartPage.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
