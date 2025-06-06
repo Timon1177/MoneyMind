@@ -3,16 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\kaytr\\Desktop\\Projekte\\MoneyMind\\MoneyMind\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7F757A09-79B5-4647-BFE7-48E07AC8C147}|MoneyMind\\MoneyMind.csproj|c:\\users\\kaytr\\desktop\\projekte\\moneymind\\moneymind\\moneymind\\feedbackpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7F757A09-79B5-4647-BFE7-48E07AC8C147}|MoneyMind\\MoneyMind.csproj|solutionrelative:moneymind\\feedbackpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7F757A09-79B5-4647-BFE7-48E07AC8C147}|MoneyMind\\MoneyMind.csproj|c:\\users\\kaytr\\desktop\\projekte\\moneymind\\moneymind\\moneymind\\edituserpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7F757A09-79B5-4647-BFE7-48E07AC8C147}|MoneyMind\\MoneyMind.csproj|solutionrelative:moneymind\\edituserpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7F757A09-79B5-4647-BFE7-48E07AC8C147}|MoneyMind\\MoneyMind.csproj|c:\\users\\kaytr\\desktop\\projekte\\moneymind\\moneymind\\moneymind\\feedbackpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{7F757A09-79B5-4647-BFE7-48E07AC8C147}|MoneyMind\\MoneyMind.csproj|solutionrelative:moneymind\\feedbackpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7F757A09-79B5-4647-BFE7-48E07AC8C147}|MoneyMind\\MoneyMind.csproj|c:\\users\\kaytr\\desktop\\projekte\\moneymind\\moneymind\\moneymind\\database.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7F757A09-79B5-4647-BFE7-48E07AC8C147}|MoneyMind\\MoneyMind.csproj|solutionrelative:moneymind\\database.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7F757A09-79B5-4647-BFE7-48E07AC8C147}|MoneyMind\\MoneyMind.csproj|c:\\users\\kaytr\\desktop\\projekte\\moneymind\\moneymind\\moneymind\\userpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7F757A09-79B5-4647-BFE7-48E07AC8C147}|MoneyMind\\MoneyMind.csproj|solutionrelative:moneymind\\userpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,40 +26,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Database.cs",
-              "DocumentMoniker": "C:\\Users\\kaytr\\Desktop\\Projekte\\MoneyMind\\MoneyMind\\MoneyMind\\Database.cs",
-              "RelativeDocumentMoniker": "MoneyMind\\Database.cs",
-              "ToolTip": "C:\\Users\\kaytr\\Desktop\\Projekte\\MoneyMind\\MoneyMind\\MoneyMind\\Database.cs",
-              "RelativeToolTip": "MoneyMind\\Database.cs",
-              "ViewState": "AQIAAFkAAAAAAAAAAAAowGQAAAAAAAAA",
+              "DocumentIndex": 0,
+              "Title": "EditUserPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\kaytr\\Desktop\\Projekte\\MoneyMind\\MoneyMind\\MoneyMind\\EditUserPage.xaml.cs",
+              "RelativeDocumentMoniker": "MoneyMind\\EditUserPage.xaml.cs",
+              "ToolTip": "C:\\Users\\kaytr\\Desktop\\Projekte\\MoneyMind\\MoneyMind\\MoneyMind\\EditUserPage.xaml.cs",
+              "RelativeToolTip": "MoneyMind\\EditUserPage.xaml.cs",
+              "ViewState": "AQIAADAAAAAAAAAAAAAIwDgAAAAmAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-06T06:56:26.59Z",
+              "WhenOpened": "2025-06-06T08:25:11.683Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "FeedbackPage.xaml",
-              "DocumentMoniker": "C:\\Users\\kaytr\\Desktop\\Projekte\\MoneyMind\\MoneyMind\\MoneyMind\\FeedbackPage.xaml",
-              "RelativeDocumentMoniker": "MoneyMind\\FeedbackPage.xaml",
-              "ToolTip": "C:\\Users\\kaytr\\Desktop\\Projekte\\MoneyMind\\MoneyMind\\MoneyMind\\FeedbackPage.xaml",
-              "RelativeToolTip": "MoneyMind\\FeedbackPage.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-06-06T06:33:27.287Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "FeedbackPage.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\kaytr\\Desktop\\Projekte\\MoneyMind\\MoneyMind\\MoneyMind\\FeedbackPage.xaml.cs",
-              "RelativeDocumentMoniker": "MoneyMind\\FeedbackPage.xaml.cs",
-              "ToolTip": "C:\\Users\\kaytr\\Desktop\\Projekte\\MoneyMind\\MoneyMind\\MoneyMind\\FeedbackPage.xaml.cs",
-              "RelativeToolTip": "MoneyMind\\FeedbackPage.xaml.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAuwBUAAAAoAAAA",
+              "Title": "UserPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\kaytr\\Desktop\\Projekte\\MoneyMind\\MoneyMind\\MoneyMind\\UserPage.xaml.cs",
+              "RelativeDocumentMoniker": "MoneyMind\\UserPage.xaml.cs",
+              "ToolTip": "C:\\Users\\kaytr\\Desktop\\Projekte\\MoneyMind\\MoneyMind\\MoneyMind\\UserPage.xaml.cs",
+              "RelativeToolTip": "MoneyMind\\UserPage.xaml.cs",
+              "ViewState": "AQIAAFgAAAAAAAAAAAAwwGYAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-06T06:33:32.544Z",
+              "WhenOpened": "2025-06-06T08:18:51.706Z",
               "EditorCaption": ""
             }
           ]

@@ -7,6 +7,9 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="EditUserPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="FeedbackPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -33,6 +36,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="EditUserPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="FeedbackPage.xaml">
       <SubType>Designer</SubType>
     </Page>

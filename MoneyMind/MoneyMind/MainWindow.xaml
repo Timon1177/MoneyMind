@@ -1,7 +1,11 @@
 ﻿<Window x:Class="MoneyMind.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="MoneyMind" WindowState="Maximized" WindowStyle="None" ResizeMode="NoResize" Background="White">
+        Title="MoneyMind"
+        WindowState="Maximized"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        Background="White">
 
     <Grid>
         <Grid.ColumnDefinitions>
@@ -9,13 +13,25 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-        <!-- Sidebar -->
         <DockPanel Background="#DAA520" Grid.Column="0" LastChildFill="True">
 
-            <Button Content="🗙 Exit" Click="ExitApp_Click" Margin="10" Padding="10" DockPanel.Dock="Bottom"/>
+            <StackPanel DockPanel.Dock="Bottom" Margin="0,0,0,10">
+                <Button Content="🚪 Logout"
+                        Click="Logout_Click"
+                        Margin="10,0,10,5"
+                        Padding="10"/>
+                <Button Content="🗙 Exit"
+                        Click="ExitApp_Click"
+                        Margin="10,0,10,10"
+                        Padding="10"/>
+            </StackPanel>
 
             <StackPanel>
-                <TextBlock Text="MoneyMind" FontSize="24" FontWeight="Bold" Foreground="White" Margin="20"/>
+                <TextBlock Text="MoneyMind"
+                           FontSize="24"
+                           FontWeight="Bold"
+                           Foreground="White"
+                           Margin="20"/>
                 <Button Content="🏠 Home" Click="NavigateHome_Click" Margin="10" Padding="10"/>
                 <Button Content="📊 Income &amp; Expense" Click="NavigateIncome_Click" Margin="10" Padding="10"/>
                 <Button Content="💰 Savinggoals" Click="NavigateGoals_Click" Margin="10" Padding="10"/>
@@ -23,9 +39,10 @@
                 <Button Content="👤 User" Click="NavigateUser_Click" Margin="10" Padding="10"/>
                 <Button Content="📝 Feedback" Click="NavigateFeedback_Click" Margin="10" Padding="10"/>
             </StackPanel>
-
         </DockPanel>
 
-        <Frame x:Name="MainFrame" Grid.Column="1" NavigationUIVisibility="Hidden"/>
+        <Frame x:Name="MainFrame"
+               Grid.Column="1"
+               NavigationUIVisibility="Hidden"/>
     </Grid>
 </Window>

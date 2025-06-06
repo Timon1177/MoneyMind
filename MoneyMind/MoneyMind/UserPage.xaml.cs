@@ -57,10 +57,10 @@ namespace MoneyMind
                     {
                         return new UserInfo
                         {
-                            FirstName = reader.GetString(0),
-                            LastName = reader.GetString(1),
-                            Email = reader.GetString(2),
-                            Username = reader.GetString(3)
+                            FirstName = reader["firstname"]?.ToString() ?? "",
+                            LastName = reader["lastname"]?.ToString() ?? "",
+                            Email = reader["email"]?.ToString() ?? "",
+                            Username = reader["username"]?.ToString() ?? ""
                         };
                     }
                 }
@@ -93,6 +93,11 @@ namespace MoneyMind
             var login = new Login();
             login.Show();
             Window.GetWindow(this)?.Close();
+        }
+
+        private void EditUser_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService?.Navigate(new EditUserPage());
         }
     }
 }
