@@ -7336,19 +7336,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\timon\\.nuget\\packages\\": {}
+    "C:\\Users\\kaytr\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\timon\\OneDrive - sluz\\IMS Sursee_Luzern 2023-24\\BBZW Sursee\\Semester 4\\IPT6.1\\MoneyMind\\MoneyMind\\MoneyMind.Tests\\MoneyMind.Tests.csproj",
+      "projectUniqueName": "C:\\Users\\kaytr\\Desktop\\Projekte\\MoneyMind\\MoneyMind\\MoneyMind.Tests\\MoneyMind.Tests.csproj",
       "projectName": "MoneyMind.Tests",
-      "projectPath": "C:\\Users\\timon\\OneDrive - sluz\\IMS Sursee_Luzern 2023-24\\BBZW Sursee\\Semester 4\\IPT6.1\\MoneyMind\\MoneyMind\\MoneyMind.Tests\\MoneyMind.Tests.csproj",
-      "packagesPath": "C:\\Users\\timon\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\timon\\OneDrive - sluz\\IMS Sursee_Luzern 2023-24\\BBZW Sursee\\Semester 4\\IPT6.1\\MoneyMind\\MoneyMind\\MoneyMind.Tests\\obj\\",
+      "projectPath": "C:\\Users\\kaytr\\Desktop\\Projekte\\MoneyMind\\MoneyMind\\MoneyMind.Tests\\MoneyMind.Tests.csproj",
+      "packagesPath": "C:\\Users\\kaytr\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\kaytr\\Desktop\\Projekte\\MoneyMind\\MoneyMind\\MoneyMind.Tests\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\timon\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\kaytr\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -7362,8 +7362,8 @@
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
           "projectReferences": {
-            "C:\\Users\\timon\\OneDrive - sluz\\IMS Sursee_Luzern 2023-24\\BBZW Sursee\\Semester 4\\IPT6.1\\MoneyMind\\MoneyMind\\MoneyMind\\MoneyMind.csproj": {
-              "projectPath": "C:\\Users\\timon\\OneDrive - sluz\\IMS Sursee_Luzern 2023-24\\BBZW Sursee\\Semester 4\\IPT6.1\\MoneyMind\\MoneyMind\\MoneyMind\\MoneyMind.csproj"
+            "C:\\Users\\kaytr\\Desktop\\Projekte\\MoneyMind\\MoneyMind\\MoneyMind\\MoneyMind.csproj": {
+              "projectPath": "C:\\Users\\kaytr\\Desktop\\Projekte\\MoneyMind\\MoneyMind\\MoneyMind\\MoneyMind.csproj"
             }
           }
         }
@@ -7416,7 +7416,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
       }
     }
   },
