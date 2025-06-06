@@ -126,7 +126,7 @@ Diese Datei dokumentiert alle vom Benutzer auszufüllenden Felder inklusive Date
   - Mockups der Benutzeroberfläche liegen im Ordner `/Mockup/`.
 
 * **Objektorientierte Prinzipien**:
-  - Vererbung: `Income` und `Expense` erben von `Transaction`.
+  - Vererbung: `Income` und `Expense` erben von `Eintrag`.
   - Polymorphismus: Einheitliche Methoden dank Interface `ITransactionService`.
   - Abstraktion: Gemeinsame Methoden in Basisklassen ausgelagert.
 
