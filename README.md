@@ -46,7 +46,11 @@ git clone https://github.com/Timon1177/MoneyMind.git
 
 ### ER-Modell
 
-![ER-Modell](./Diagramme/ER_.png)
+![ER-Modell](./Diagramme/ER_Modell.png)
+
+### Relationales-Modell
+
+![ER-Modell](./Diagramme/relationales_Modell.png)
 
 ### UML-Klassendiagramm
 
@@ -55,6 +59,16 @@ git clone https://github.com/Timon1177/MoneyMind.git
 ### Programmablaufplan
 
 ![Programmablaufplan](./Diagramme/Programmablaufplan.png)
+
+---
+
+### Mockup
+
+![Mockup Mainpage](./Mockup/Mockup_Mainpage.png)
+
+![Mockup Income & Expense](./Mockup/Mockup_Income&Expense.png)
+
+![Mockup Savinggoals](./Mockup/Mockup_Savinggoals.png)
 
 ---
 
@@ -70,6 +84,26 @@ git clone https://github.com/Timon1177/MoneyMind.git
 2. Einnahmen/Ausgaben erfassen
 3. Sparziele setzen & verfolgen
 4. Daten über das Hauptmenü verwalten
+
+---
+
+# Eingabefelder & Validierung in MoneyMind
+
+Diese Datei dokumentiert alle vom Benutzer auszufüllenden Felder inklusive Datentyp, Pflichtfeldstatus und der Validierungslogik.
+
+| Eingabefeld           | Beschreibung                    | Datentyp   | Pflichtfeld | Validierung                                                                 |
+|-----------------------|----------------------------------|------------|-------------|------------------------------------------------------------------------------|
+| Username              | Benutzername                    | string     | ✅ Ja       | Nicht leer, eindeutig                                                        |
+| Password              | Passwort                        | string     | ✅ Ja       | Nicht leer, Mindestlänge empfohlen                                           |
+| Email                 | E-Mail-Adresse                  | string     | ✅ Ja       | Nicht leer, gültiges E-Mail-Format (optional)                               |
+| IncomeAmount          | Einkommensbetrag                | double     | ✅ Ja       | > 0, gültige Zahl                                                            |
+| IncomeCategory        | Kategorie des Einkommens        | string     | ✅ Ja       | Nicht leer                                                                   |
+| ExpenseAmount         | Ausgabebetrag                   | double     | ✅ Ja       | > 0, gültige Zahl                                                            |
+| ExpenseCategory       | Kategorie der Ausgabe           | string     | ✅ Ja       | Nicht leer                                                                   |
+| ExpenseType           | Art der Ausgabe (Fixed/Other)   | string     | ✅ Ja       | Muss "Fixed" oder "Other" sein                                               |
+| SavingGoalName        | Name des Sparziels              | string     | ✅ Ja       | Nicht leer                                                                   |
+| SavingGoalAmount      | Betrag des Sparziels            | double     | ✅ Ja       | > 0, gültige Zahl                                                            |
+| SavingGoalDeadline    | Zieldatum für das Sparziel      | DateTime   | ✅ Ja       | Format: yyyy-MM-dd, Datum muss in der Zukunft liegen                         |
 
 ---
 
