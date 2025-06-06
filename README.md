@@ -4,6 +4,12 @@
 
 ---
 
+## Video
+
+[Projektvideo ansehen](./Video.mp4)
+
+---
+
 ## Features
 
 * 📥 Einnahmen & Ausgaben erfassen
@@ -69,12 +75,6 @@ git clone https://github.com/Timon1177/MoneyMind.git
 ![Mockup Income & Expense](./Mockup/Mockup_Income&Expense.png)
 
 ![Mockup Savinggoals](./Mockup/Mockup_Savinggoals.png)
-
----
-
-## Video
-
-[Projektvideo ansehen](./Video.mp4)
 
 ---
 
