@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Data.SQLite;
 using System.Windows;
 using System.Windows.Controls;
 
@@ -26,12 +25,7 @@ namespace MoneyMind
 
             try
             {
-                using var conn = Database.Connection;
-                using var cmd = new SQLiteCommand("INSERT INTO Feedback (Title, Message, Email) VALUES (@title, @message, @email)", conn);
-                cmd.Parameters.AddWithValue("@title", title);
-                cmd.Parameters.AddWithValue("@message", message);
-                cmd.Parameters.AddWithValue("@email", string.IsNullOrWhiteSpace(email) ? DBNull.Value : email);
-                cmd.ExecuteNonQuery();
+                Database.SaveFeedback(title, message, email);
 
                 MessageBox.Show("Thank you for your feedback!", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
 

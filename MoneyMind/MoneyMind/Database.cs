@@ -99,6 +99,15 @@ namespace MoneyMind
       return list;
     }
 
+    public static void SaveFeedback(string title, string message, string? email)
+    {
+      using var cmd = new SQLiteCommand("INSERT INTO Feedback (Title, Message, Email) VALUES (@title, @message, @email)", Connection);
+      cmd.Parameters.AddWithValue("@title", title);
+      cmd.Parameters.AddWithValue("@message", message);
+      cmd.Parameters.AddWithValue("@email", string.IsNullOrWhiteSpace(email) ? DBNull.Value : email);
+      cmd.ExecuteNonQuery();
+    }
+
     public static void insertTestData()
     {
       string insertPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "sqlscripts", "insert.sql");
@@ -134,7 +143,6 @@ namespace MoneyMind
           ExecuteSqlScript(createPath);
           Console.WriteLine("create.sql executed.");
         }
-        
 
         string updatePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "sqlscripts", "update.sql");
         if (File.Exists(updatePath))
@@ -142,15 +150,12 @@ namespace MoneyMind
           ExecuteSqlScript(updatePath);
           Console.WriteLine("update.sql executed.");
         }
-
-        
       }
       catch (Exception ex)
       {
         Console.WriteLine("Error:\n" + ex.Message);
       }
     }
-
 
     private static void ExecuteSqlScript(string path)
     {
