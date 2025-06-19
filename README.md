@@ -6,10 +6,7 @@
 
 ## Video
 
-[Projektvideo ansehen](./Video.mp4)
-<video width="320" height="240" controls>
-  <source src="./Video.mp4" type="video/mp4">
-</video>
+[App Functionality Demo](https://youtu.be/Er90WcDaQEE)
 
 ---
 
