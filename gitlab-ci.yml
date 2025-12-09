@@ -1,7 +1,0 @@
-stages:
-  - data
-
-show-data:
-    stage: data
-    script:
-      - tree -a
